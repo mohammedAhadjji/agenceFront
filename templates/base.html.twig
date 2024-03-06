@@ -1,19 +1,297 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		<meta name="description" content=""><meta name="keywords" content="">
+		<link
+		rel="icon" type="image/png" href="https://scriptsnest.com/travelfresh/public/uploads/favicon.png">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/animate.min.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/magnific-popup.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/superfish.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/slicknav.min.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/style.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/spacing.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/custom.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/responsive.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/chosen.css">
+		<link rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/datatable.min.css">
+		<link
+		rel="stylesheet" href="https://scriptsnest.com/travelfresh/public/css/toastr.min.css">
+
+
+		<!-- All JS Files -->
+		<script src="https://scriptsnest.com/travelfresh/public/js/jquery-2.2.4.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/bootstrap.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/chosen.jquery.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/docsupport/init.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/jquery.magnific-popup.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/jquery.dataTables.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/owl.carousel.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/easing.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/wow.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/superfish.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/jquery.slicknav.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/jquery.counterup.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/viewportchecker.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/waypoints.min.js"></script>
+		<script src="https://scriptsnest.com/travelfresh/public/js/toastr.min.js"></script>
+		<script src="https://js.stripe.com/v2/"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<title>
+			{% block title %}home page
+			{% endblock %}
+		</title>
+		<link
+		rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+		<div class="top-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-8">
+						<div class="top-header-left">
+							<p>
+								<i class="fa fa-phone"></i>954-648-1802</p>
+							<p>
+								<i class="fa fa-envelope-o"></i>info@yourwebsite.com</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-4">
+						<div class="top-header-right">
+							<a href="https://scriptsnest.com/travelfresh/traveller/registration">
+								<i class="fa fa-user-plus"></i>Registration</a>
+							<a href="https://scriptsnest.com/travelfresh/traveller/login">
+								<i class="fa fa-user-circle"></i>Login</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12">
+						<div class="logo">
+							<a href="https://scriptsnest.com/travelfresh/"><img src="https://scriptsnest.com/travelfresh/public/uploads/logo.png" alt="Logo"></a>
+						</div>
+					</div>
+					<div class="col-md-9 col-sm-12">
+						<div class="nav-wrapper main-menu">
+							<nav>
+								<ul class="sf-menu sf-js-enabled sf-arrows" id="menu">
+									<li>
+										<a href="https://scriptsnest.com/travelfresh/">Home</a>
+									</li>
+									<li>
+										<a href="https://scriptsnest.com/travelfresh/service">Services</a>
+									</li>
+									<li>
+										<a href="https://scriptsnest.com/travelfresh/destination">Destinations</a>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="javascript:void;" class="sf-with-ul">Pages</a>
+										<ul style="display: none;">
+											<li>
+												<a href="https://scriptsnest.com/travelfresh/about">About Us</a>
+											</li>
+											<li>
+												<a href="https://scriptsnest.com/travelfresh/team">Our Team</a>
+											</li>
+											<li>
+												<a href="https://scriptsnest.com/travelfresh/testimonial">Testimonial</a>
+											</li>
+											<li>
+												<a href="https://scriptsnest.com/travelfresh/faq">FAQ</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="https://scriptsnest.com/travelfresh/news">News</a>
+									</li>
+									<li>
+										<a href="https://scriptsnest.com/travelfresh/contact">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% block body %}{% endblock %}
+		
+		<div class="footer-area pt_50 pb_80">
+			<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+						<div class="footer-item mt_30">
+							<h3>Upcoming Tours</h3>
+							<ul>
+								<li><a href="https://scriptsnest.com/travelfresh/package/36">15 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/35">12 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/34">7 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/33">3 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/31">7 days in Marrakesh</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/30">12 days in Marrakesh</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/29">15 days in Marrakesh</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+						<div class="footer-item mt_30">
+							<h3>Featured Tours</h3>
+							<ul>
+								<li><a href="https://scriptsnest.com/travelfresh/package/38">30 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/35">12 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/33">3 days in Salina Island</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/31">7 days in Marrakesh</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/29">15 days in Marrakesh</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/27">30 days in Marrakesh</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/package/26">3 days in Los Cabos</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+						<div class="footer-item mt_30">
+							<h3>Recent News</h3>
+							<ul>
+								<li><a href="https://scriptsnest.com/travelfresh/news/view/4">Ei qui possim abhorreant ei eam iudico disputando</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/news/view/3">Est ei unum illum mucius, nemore alterum corpora at ius</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/news/view/2">An usu natum aperiri accommodare, hendrerit tincidunt</a></li>
+								<li><a href="https://scriptsnest.com/travelfresh/news/view/1">Vis nostro nominati electram ex aeterno voluptatum</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;">
+						<div class="footer-item mt_30">
+							<h3>Address</h3>
+							<div class="footer-address-item">
+								<div class="icon">
+									<i class="fa fa-map-marker"></i>
+								</div>
+								<div class="text">
+									<span>3153 Foley Street<br>
+										Miami, FL 33176</span>
+								</div>
+							</div>
+							<div class="footer-address-item">
+								<div class="icon">
+									<i class="fa fa-phone"></i>
+								</div>
+								<div class="text">
+									<span>Sales: 954-648-1802<br>
+										Support: 963-612-1782</span>
+								</div>
+							</div>
+							<div class="footer-address-item">
+								<div class="icon">
+									<i class="fa fa-envelope-o"></i>
+								</div>
+								<div class="text">
+									<span>sales@yourwebsite.com<br>
+										support@yourwebsite.com</span>
+								</div>
+							</div>
+							<ul class="footer-social">
+								<li>
+									<a href="http://www.facebook.com">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="http://www.twitter.com">
+										<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="http://www.linkedin.com">
+										<i class="fa fa-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="http://www.pinterest.com">
+										<i class="fa fa-pinterest"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com">
+										<i class="fa fa-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll-top" style="display: block;">
+			<i class="fa fa-angle-up"></i>
+		</div>
+
+
+		<script src="https://scriptsnest.com/travelfresh/public/js/custom.js"></script>
+
+
+		<script>
+			$(document).on('submit', '#stripe_form', function () {
+$('#submit-button').prop("disabled", true);
+$("#msg-container").hide();
+Stripe.card.createToken({
+number: $('.card-number').val(), cvc: $('.card-cvc').val(), exp_month: $('.card-expiry-month').val(), exp_year: $('.card-expiry-year').val()
+// name: $('.card-holder-name').val()
+}, stripeResponseHandler);
+return false;
+});
+Stripe.setPublishableKey('pk_test_0SwMWadgu8DwmEcPdUPRsZ7b');
+function stripeResponseHandler(status, response) {
+if (response.error) {
+$('#submit-button').prop("disabled", false);
+$("#msg-container").html('<div style="color: red;border: 1px solid;margin: 10px 0px;padding: 5px;"><strong>Error:</strong> ' + response.error.message + '</div>');
+$("#msg-container").show();
+} else {
+var form$ = $("#stripe_form");
+var token = response['id'];
+form$.append("<input type='hidden' name='stripeToken' value='" + token + "' />");
+form$.get(0).submit();
+}
+}
+		</script>
+
+		<script>
+			toastr.options = {
+"closeButton": false,
+"debug": false,
+"newestOnTop": false,
+"progressBar": true,
+"positionClass": "toast-top-right",
+"preventDuplicates": true,
+"onclick": null,
+"showDuration": "300",
+"hideDuration": "1000",
+"timeOut": "3000",
+"extendedTimeOut": "1000",
+"showEasing": "swing",
+"hideEasing": "linear",
+"showMethod": "fadeIn",
+"hideMethod": "fadeOut"
+}
+		</script>
+	</body>
 </html>
