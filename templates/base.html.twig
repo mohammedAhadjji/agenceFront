@@ -78,6 +78,8 @@
 <script src="{{ asset('assetes/js/viewportchecker.js') }}"></script>
 <script src="{{ asset('assetes/js/waypoints.min.js') }}"></script>
 <script src="{{ asset('assetes/js/wow.min.js') }}"></script>
+
+
 <script src="{{ asset('assetes/js/superfish.js') }}"></script>
 
 
@@ -102,80 +104,60 @@
 		{% endblock %}
 	</head>
 	<body>
-		<div class="top-header">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-8">
-						<div class="top-header-left">
-							<p>
-								<i class="fa fa-phone"></i>954-648-1802</p>
-							<p>
-								<i class="fa fa-envelope-o"></i>info@yourwebsite.com</p>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-4">
-						<div class="top-header-right">
-							<a href="https://scriptsnest.com/travelfresh/traveller/registration">
-								<i class="fa fa-user-plus"></i>Registration</a>
-							<a href="https://scriptsnest.com/travelfresh/traveller/login">
-								<i class="fa fa-user-circle"></i>Login</a>
+    <div class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-8">
+                    <div class="top-header-left">
+                        <p><i class="fa fa-phone"></i>954-648-1802</p>
+                        <p><i class="fa fa-envelope-o"></i>info@yourwebsite.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-4">
+                    <div class="top-header-right">
+                                                    <a href="https://demo.phpscriptpoint.com/travelfresh/traveller/registration"><i class="fa fa-user-plus"></i>Registration</a>
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/traveller/login"><i class="fa fa-user-circle"></i>Login</a>
+                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="menu-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-12">
-						<div class="logo">
-							<a href="https://scriptsnest.com/travelfresh/"><img src="https://scriptsnest.com/travelfresh/public/uploads/logo.png" alt="Logo"></a>
-						</div>
-					</div>
-					<div class="col-md-9 col-sm-12">
-						<div class="nav-wrapper main-menu">
-							<nav>
-								<ul class="sf-menu sf-js-enabled sf-arrows" id="menu">
-									<li>
-										<a href="https://scriptsnest.com/travelfresh/">Home</a>
-									</li>
-									<li>
-										<a href="https://scriptsnest.com/travelfresh/service">Services</a>
-									</li>
-									<li>
-										<a href="https://scriptsnest.com/travelfresh/destination">Destinations</a>
-									</li>
-									<li class="menu-item-has-children">
-										<a href="javascript:void;" class="sf-with-ul">Pages</a>
-										<ul style="display: none;">
-											<li>
-												<a href="https://scriptsnest.com/travelfresh/about">About Us</a>
-											</li>
-											<li>
-												<a href="https://scriptsnest.com/travelfresh/team">Our Team</a>
-											</li>
-											<li>
-												<a href="https://scriptsnest.com/travelfresh/testimonial">Testimonial</a>
-											</li>
-											<li>
-												<a href="https://scriptsnest.com/travelfresh/faq">FAQ</a>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<a href="https://scriptsnest.com/travelfresh/news">News</a>
-									</li>
-									<li>
-										<a href="https://scriptsnest.com/travelfresh/contact">Contact</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="logo">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/"><img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/logo.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="nav-wrapper main-menu">
+                        <nav>
+                            <ul class="sf-menu" id="menu">
+                                <li><a href="https://demo.phpscriptpoint.com/travelfresh/">Home</a></li>
+                                <li><a href="https://demo.phpscriptpoint.com/travelfresh/service">Services</a></li>
+                                <li><a href="https://demo.phpscriptpoint.com/travelfresh/destination">Destinations</a></li>
+                                <li class="menu-item-has-children"><a href="javascript:void;">Pages</a>
+                                    <ul>
+                                        <li><a href="https://demo.phpscriptpoint.com/travelfresh/about">About Us</a></li>
+                                        <li><a href="https://demo.phpscriptpoint.com/travelfresh/team">Our Team</a></li>
+                                        <li><a href="https://demo.phpscriptpoint.com/travelfresh/testimonial">Testimonial</a></li>
+                                        <li><a href="https://demo.phpscriptpoint.com/travelfresh/faq">FAQ</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://demo.phpscriptpoint.com/travelfresh/news">News</a></li>
+                                <li><a href="https://demo.phpscriptpoint.com/travelfresh/contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+			
 		{% block body %}{% endblock %}
 		
 		<div class="footer-area pt_50 pb_80">

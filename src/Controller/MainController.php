@@ -37,7 +37,8 @@ class MainController extends AbstractController
             "distination" => $destination['hydra:member']
         ]);
     }
-   /* #[Route('/test', name: 'app_test')]
+
+   #[Route('/test', name: 'app_test')]
     public function test(Request $request): Response
     {
         $form = $this->createForm(VilleType::class);
@@ -50,7 +51,8 @@ class MainController extends AbstractController
         return $this->render('main/test.html.twig', [
             'form' => $form->createView(),
         ]);
-    }*/
+    }
+    
     #[Route('/destination/views{id<.+>}', name: 'app_offres')]
     public function offers(Request $request): Response
     {
