@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une ville{% endblock %}
+
+{% block body %} 
+  <div class="container p-3" style="width: 50%;margin-left:20%;">
+    <h1>Ajouter une nouvelle ville</h1>
+    <form id="addCityForm" class="p-1">
+      <div class="mb-3">
+        <label for="cityName" class="form-label">Nom de la ville</label>
+        <input type="text" class="form-control" id="cityName" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="imageFile" class="form-label">Image de la ville</label>
+        <div id="imageInputs">
+          <div class="mb-3">
+            <label for="imageFile1" class="form-label">Image de la ville 1</label>
+            <input type="file" class="form-control" name="images[0][file]" required>
+            <button type="button" class="btn btn-danger btn-remove-file">Supprimer</button>
+          </div>
+        </div>
+        <button type="button" id="addImageButton" class="btn btn-primary">Ajouter un autre fichier</button>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+  </div>
+ <!-- Modal -->
+  <div class="modal  fade-in active" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog saccess" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Succès</h5>
+        </div>
+        <div class="modal-body success">
+
+          La ville a été ajoutée avec succès !
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+   document.getElementById("addImageButton").addEventListener("click", function() {
+  var imageInputs = document.getElementById("imageInputs");
+  var index = imageInputs.children.length; // Compte le nombre d'éléments déjà présents
+  var newInput = document.createElement("div");
+  newInput.className = "mb-3 file-input fade-in delayed"; // Ajoutez les classes fade-in et delayed
+  newInput.innerHTML = '<label for="imageFile' + index + '" class="form-label">Image de la ville ' + (index + 1) + '</label>' +
+      '<input type="file" class="form-control" name="images[' + index + '][file]" required>' +
+      '<button type="button" class="btn btn-danger btn-remove-file">Supprimer</button>';
+  imageInputs.appendChild(newInput);
+
+  // Ajoutez la classe active après un court délai pour déclencher la transition d'opacité
+  setTimeout(function() {
+    newInput.classList.add("active");
+  }, 100); // Ajustez le délai selon vos besoins
+});
+
+
+    document.getElementById("addCityForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+      // Créer un objet FormData et ajouter les données du formulaire
+      const formData = new FormData(document.getElementById("addCityForm"));
+
+      // Configurer les options de requête
+      const requestOptions = {
+        method: "POST",
+        body: formData,
+        redirect: "follow"
+      };
+
+      // Envoyer une requête POST en utilisant l'API Fetch
+      fetch("http://localhost:8001/api/villes", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result); 
+           $('#successModal').modal('show');
+            })
+        .catch(error => console.error(error));
+    });
+
+    // Gestionnaire d'événements pour les boutons de suppression de fichier
+    document.addEventListener("click", function(event) {
+      if (event.target.classList.contains("btn-remove-file")) {
+        event.target.parentElement.remove(); // Supprimer le champ de fichier et le bouton "Supprimer"
+      }
+    });
+  </script>
+  <style>
+  .fade-in {
+  opacity: 0.1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+/* Ajouter une classe pour retarder l'activation de l'effet de fondu */
+.fade-in.delayed {
+  transition-delay: 0.1s; /* Ajuster le délai selon vos besoins */
+}
+
+  </style>
+{% endblock %}

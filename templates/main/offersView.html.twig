@@ -1,0 +1,257 @@
+{% extends 'base.html.twig' %}  
+{% block body %}
+<div class="banner-slider high-banner" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-banner-9.jpg)">
+    <div class="bg"></div>
+    <div class="bannder-table">
+        <div class="banner-text">
+            <h1>
+                {{ offre['Titre'] }}<br>
+                {% if offre['prix'] is defined %}
+                (${{offre['prix']}} / person){% endif %}
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="featured-detail country-detail pt_30 pb_80" style="background:#fff;">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-8 wow fadeIn" data-wow-delay="0.2s">
+
+                <div class="fea-descrip mt_30">
+
+                    <div class="headstyle-two">
+                        <h4>Tour Dates</h4>
+                    </div>
+                    <div class="descrip-pre table-responsive">
+                                                <table class="table table-bordered">
+                            <tr>
+                                <th>Tour Start Date</th>
+                                <th>Tour End Date</th>
+                                <th>Last Booking Date</th>
+                            </tr>
+                            <tr>
+                                <td><span style="font-size:20px;"><b>2030-02-12</b></span></td>
+                                <td><span style="font-size:20px;"><b>2030-02-18</b></span></td>
+                                                                    <td><span style="font-size:20px;color:green;"><b>2030-02-06</b></span></td>
+                                                            </tr>
+                        </table>
+                    </div>
+                    <div class="headstyle-two">
+                        <h4>Tour Description</h4>
+                    </div>
+                    <div class="descrip-pre">
+                        <p>
+                            <p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.2s">
+                <div class="fea-descrip mt_30">
+                    <div class="headstyle-two">
+                        <h4>Book Now</h4>
+                    </div>
+                    <div class="row book-now">
+                        <div class="col-md-12">
+                            <form action="https://demo.phpscriptpoint.com/travelfresh/payment" class="" method="post" accept-charset="utf-8">
+                                <input type="hidden" name="p_id" value="9">
+                                <input type="hidden" name="p_price_single" value="400">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Total Price (per person)</label>
+                                            <div class="mb_5" style="font-size:32px;">
+                                                $400                                            </div>
+                                            <div class="sep mb_10"></div>
+                                            <label>Number of Persons</label>
+                                            <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                            </select>
+                                            <div class="sep mb_15"></div>
+                                            <label>Total Price</label>
+                                            <div class="mb_15" style="font-size:32px;">
+                                                $<span id="totalPrice">400</span>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </div>
+                                
+                                                                <div class="form-group">
+                                    <button class="btn btn-info btn-lg" type="submit" name="form_book">Book Your Seat</button>
+                                </div>
+                                
+                            </form>                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="featured-detail country-detail pt_0 pb_80" style="background:#fff;">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 wow fadeIn" data-wow-delay="0.2s">
+
+
+                <div class="fea-descrip mt_30">
+                    <div class="headstyle-two">
+                        <h4>More Information</h4>
+                    </div>
+                </div>
+
+                <!--Package-Details-Tab Start-->
+                <div class="package-tab-det-menu mt_30">
+                    <ul>
+                        <li class="active"><a href="#tb1" data-toggle="tab" aria-expanded="true">Tour Photos</a></li>
+                        <li class=""><a href="#tb2" data-toggle="tab" aria-expanded="true">Tour Videos</a></li>
+                        <li class=""><a href="#tb3" data-toggle="tab" aria-expanded="true">Tour Information</a></li>
+
+                                                <li class=""><a href="#tb4" data-toggle="tab" aria-expanded="true">Itinerary</a></li>
+                        
+                                                <li class=""><a href="#tb7" data-toggle="tab" aria-expanded="true">Policy</a></li>
+                                                
+                                                <li class=""><a href="#tb8" data-toggle="tab" aria-expanded="true">Terms and Conditions</a></li>
+                                            </ul>
+                </div>
+                <div class="tab-content package-content package-detail-content p_30">
+                    <div class="tab-pane active" id="tb1">
+                        
+
+                                                
+                        <div class="row">
+                            {% for img in offre['image'] %}
+                                
+                                                            <div class="col-md-4 col-xs-6 clear-three">
+                                    <div class="portfolio-item mt_30">
+                                        <div class="portfolio-bg"></div>
+                                        <img src="http://localhost:8001/attchments/offers/{{ img['name'] }}" alt="">
+                                        <div class="portfolio-text">
+                                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/40.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            {% endfor %}
+                                                                <div class="col-md-4 col-xs-6 clear-three">
+                                    <div class="portfolio-item mt_30">
+                                        <div class="portfolio-bg"></div>
+                                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/41-thumb.jpeg" alt="">
+                                        <div class="portfolio-text">
+                                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/41.jpeg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="col-md-4 col-xs-6 clear-three">
+                                    <div class="portfolio-item mt_30">
+                                        <div class="portfolio-bg"></div>
+                                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/42-thumb.jpg" alt="">
+                                        <div class="portfolio-text">
+                                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/42.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                        </div>
+
+                                            </div>
+                    <div class="tab-pane" id="tb2">
+
+                        
+                        <div class="row">
+                                                                <div class="col-md-6 col-xs-6 clear-two">
+                                        <div class="portfolio-item mt_30">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xC4h7SA6sBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                        </div>
+                                    </div>                                            
+                                                                        <div class="col-md-6 col-xs-6 clear-two">
+                                        <div class="portfolio-item mt_30">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yTIYJwqHzHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                                        </div>
+                                    </div>                                            
+                                                                </div>
+                                            </div>
+                    <div class="tab-pane" id="tb3">
+                        <div class="feat-detail-table table-responsive">
+                            <table class="table table-bordered table-striped">
+                                                                <tr>
+                                    <th>Tour Start Date</th>
+                                    <td>2030-02-12</td>
+                                </tr>
+                                <tr>
+                                    <th>Tour End Date</th>
+                                    <td>2030-02-18</td>
+                                </tr>
+                                <tr>
+                                    <th>Last Booking Date</th>
+                                    <td>2030-02-06</td>
+                                </tr>
+                                                                <tr>
+                                    <th>Address in Map</th>
+                                    <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496113.92041601305!2d100.3529071711315!3d13.72510879354118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C+Thailand!5e0!3m2!1sen!2sbd!4v1544191664761" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></td>
+                                </tr>
+                                                            </table>
+                        </div>
+                    </div>
+
+                                        <div class="tab-pane" id="tb4">
+                        <p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+                    </div>
+                    
+                                           
+                                        <div class="tab-pane" id="tb7">                            
+                        <p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+                    </div>
+                    
+                                        <div class="tab-pane" id="tb8">                            
+                        <p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+ 
+        {% endblock %}

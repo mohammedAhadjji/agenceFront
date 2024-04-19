@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}  
+{% block body %}
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+   {% include 'partiels/_banner-slider.html.twig'  with {
+    destination : destination
+} %}
+
+<div class="country-package pt_80 pb_80">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+                <div class="country-text">
+                    <h2>{{ destination['ville']['name'] }} Tours & Vacations</h2>
+                    <p>
+                        Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.                    </p>
+                    <div class="country-social mt_30" style="text-align: center;">
+                        <h3>Social Share</h3>
+                        <div class="sharethis-inline-share-buttons"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-page pt_40 pb_80 bg-area">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline">
+                    <div class="headline">
+                        <h2>{{ destination['ville']['name'] }} Packages</h2>
+                    </div>
+                    <p>Vis constituto complectitur an, modo falli eirmod ea has.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+{% include 'partiels/_offers.html.twig' with {
+    offre : offers
+} %}               
+</div>
+    </div>
+</div>
+
+<div class="package-tabarea pt_80 pb_80">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline">
+                    <div class="headline">
+                        <h2>{{ destination['ville']['name'] }} Tours</h2>
+                    </div>
+                    <p>Vis constituto complectitur an, modo falli eirmod ea has.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row package-tab mt_30">
+            <div class="col-md-3 col-sm-4 mt_30 lg_pl_0">
+                <div class="package-tab-menu">
+                    <ul>
+                        <li class="active"><a href="#tb1" data-toggle="tab" aria-expanded="true">Introduction</a></li>
+                        <li><a href="#tb2" data-toggle="tab" aria-expanded="true">Experience</a></li>
+                        <li><a href="#tb3" data-toggle="tab" aria-expanded="true">Weather</a></li>
+                        <li><a href="#tb4" data-toggle="tab" aria-expanded="true">Hotel</a></li>
+                        <li><a href="#tb5" data-toggle="tab" aria-expanded="true">Transportation</a></li>
+                        <li><a href="#tb6" data-toggle="tab" aria-expanded="true">Culture</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8 tab-content package-content mt_30">
+                <div class="tab-pane fade in active" id="tb1">
+                    <p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p><p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.<br></p><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.<br></p>                </div>
+                <div class="tab-pane fade in" id="tb2">
+                   <p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p><p>Ex vix alienum sadipscing, quod melius philosophia id has. Ad qui quem reprimique, quo possit detracto reprimique no, sint reque officiis ei per. Ea regione commune volutpat pro, fabulas facilis omnesque mei ne. Cu unum detracto comprehensam sea, ad vim ancillae principes, ex usu fugit consulatu. Vis te purto equidem voluptatum.<br></p>                </div>
+                <div class="tab-pane fade in" id="tb3">
+                    <p>Detracto contentiones te est, brute ipsum consul an vis. Mea ei regione blandit ullamcorper, definiebas constituam vix ei. At his ludus nonumes gloriatur. Ne vim tamquam nonumes.</p><p>Duo purto pertinax in. Ea noluisse mediocrem qui, nobis melius vis et. Iudico delicatissimi no qui, quando fastidii nam et, ne eum rationibus deseruisse neglegentur. Ei eum populo viderer reprimique, tantas homero abhorreant usu ei, at postulant gloriatur vituperata sit.<br></p>                </div>
+                <div class="tab-pane fade in" id="tb4">
+                    <p>Vis constituto complectitur an, modo falli eirmod ea has. Ex vis indoctum scriptorem appellantur, nec noluisse perpetua ea. Solum dissentias est ei, ipsum decore ridens qui ei. Mel augue pertinax ne.</p><p>Latine sanctus perfecto ad pro. Ut vel molestiae intellegam, in qui ornatus laboramus. Vix aeterno persius ea. Ut animal aliquid vis, at dico accumsan quaestio nam, vero discere corrumpit vel cu.<br></p><p>Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut. Id illum tantas gloriatur duo. Vis ne prima cetero, erant iusto democritum at vim. Ne integre vivendum delicata eum, ei erat senserit qui.<br></p>                </div>
+                <div class="tab-pane fade in" id="tb5">
+                    <p>Eu semper imperdiet duo, eos ut exerci sanctus impedit, sit ne legere maiorum gubergren. Putent accusamus te qui, vero forensibus ei ius. His nostrud singulis forensibus te, in possim gubergren his. Habemus officiis qui te, vix te meliore rationibus. No augue zril reformidans est. Pro ex unum vidit, no est noster discere neglegentur, et dictas tamquam his.</p><p>Ancillae interpretaris ea has. Id amet impedit qui, eripuit mnesarchum percipitur in eam. Ne sit habeo inimicus, no his liber regione volutpat. Ex quot voluptaria usu, dolor vivendo docendi nec ea. Et atqui vocent integre vim, quod cibo recusabo ei usu, soleat deseruisse percipitur pri no. Aeterno theophrastus id pro.<br></p><p>Dicit alterum est no, ea per tale possit, cum ad solum malorum offendit. Ea nam meis novum qualisque, pro alia delicata gubergren ad. Ea error eloquentiam vel, quo iusto iudico in. No mazim alterum dignissim nec. Te postea iisque aperiri eum. Eius inciderint at mel.<br></p>                </div>
+                <div class="tab-pane fade in" id="tb6">
+                    <p>An usu natum aperiri accommodare, hendrerit tincidunt quo ne. Est ei unum illum mucius, nemore alterum corpora at ius. Vis nostro nominati electram ex, aeterno voluptatum interesset an usu, pri iudico evertitur ad. Purto oratio ullamcorper mea ad.</p><p>Ei qui possim abhorreant, ei eam iudico disputando interpretaris. Augue nusquam delectus per ex, sit no affert eloquentiam. Ei duo etiam fabellas evertitur, apeirian probatus corrumpit mel ei, mei exerci argumentum eu. Nobis essent inciderint in ius, has eu vide referrentur. Cu causae cetero eos, mea id aliquam adipisci pertinax. Lobortis laboramus contentiones ex ius.<br></p><p>Eius appetere scribentur ei sea, ex quo iudicabit neglegentur. Id commodo mediocrem tincidunt eum. Deleniti vivendum vituperatoribus mea ea, mea debet movet commodo cu, at eum tantas sententiae. Mei delectus vituperatoribus ei. Ei causae maiestatis nam, no his tantas dolorem.<br></p>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

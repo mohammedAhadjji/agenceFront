@@ -2,9 +2,19 @@
 
 {% block title %}Home page{% endblock %}
 
-{% block body %}    </div><div class="slider">
+{% block body %}     
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+<div class="slider">
     <div class="slide-carousel owl-carousel">
-                    <div class="slider-item" style="background-image:url(public/uploads/slider-1.png);">
+                    <div class="slider-item" style="background-image: url({{ asset('assetes/imageApp/slider-1.png') }});">
                 <div class="slider-bg"></div>
                 <div class="container">
                     <div class="row">
@@ -32,7 +42,7 @@
                     </div>
                 </div>
             </div>
-                        <div class="slider-item" style="background-image:url(public/uploads/slider-2.jpg);">
+                        <div class="slider-item" style="background-image: url({{ asset('assetes/imageApp/slider-2.jpg') }});">
                 <div class="slider-bg"></div>
                 <div class="container">
                     <div class="row">
@@ -78,8 +88,8 @@
         </div>
         <div class="row">
                             <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-1.jpg)">
-                        <a href="https://scriptsnest.com/travelfresh/service/view/1">
+                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-1.jpg)">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/1">
                             <i class="fa fa-globe"></i>
                             <div class="ser-text">
                                 <h4>International Tour</h4>
@@ -90,8 +100,8 @@
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-2.jpg)">
-                        <a href="https://scriptsnest.com/travelfresh/service/view/2">
+                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-2.jpg)">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/2">
                             <i class="fa fa-superpowers"></i>
                             <div class="ser-text">
                                 <h4>Adventure Tour</h4>
@@ -102,8 +112,8 @@
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-3.jpg)">
-                        <a href="https://scriptsnest.com/travelfresh/service/view/3">
+                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-3.jpg)">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/3">
                             <i class="fa fa-handshake-o"></i>
                             <div class="ser-text">
                                 <h4>Business Tour</h4>
@@ -114,8 +124,8 @@
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-4.jpg)">
-                        <a href="https://scriptsnest.com/travelfresh/service/view/4">
+                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-4.jpg)">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/4">
                             <i class="fa fa-anchor"></i>
                             <div class="ser-text">
                                 <h4>Domestic Tour</h4>
@@ -126,8 +136,8 @@
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-5.jpg)">
-                        <a href="https://scriptsnest.com/travelfresh/service/view/5">
+                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-5.jpg)">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/5">
                             <i class="fa fa-heartbeat"></i>
                             <div class="ser-text">
                                 <h4>Medical Tour</h4>
@@ -138,8 +148,8 @@
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-6.jpg)">
-                        <a href="https://scriptsnest.com/travelfresh/service/view/6">
+                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-6.jpg)">
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/6">
                             <i class="fa fa-snowflake-o"></i>
                             <div class="ser-text">
                                 <h4>Religious Tour</h4>
@@ -172,187 +182,187 @@
 
                                             <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-38-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-38-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$550 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/38">30 days in Salina Island</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/38">30 days in Salina Island</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-35-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-35-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$450 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/35">12 days in Salina Island</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/35">12 days in Salina Island</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-33-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-33-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$350 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/33">3 days in Salina Island</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/33">3 days in Salina Island</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-31-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-31-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$280 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/31">7 days in Marrakesh</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/31">7 days in Marrakesh</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-29-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-29-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$350 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/29">15 days in Marrakesh</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/29">15 days in Marrakesh</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-27-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-27-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$500 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/27">30 days in Marrakesh</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/27">30 days in Marrakesh</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-26-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-26-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$420 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/26">3 days in Los Cabos</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/26">3 days in Los Cabos</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-25-thumb.png" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-25-thumb.png" alt="">
                                 <span class="price" style="background: ##3367c1;">$450 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/25">7 days in Los Cabos</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/25">7 days in Los Cabos</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-23-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-23-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$500 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/23">15 days in Los Cabos</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/23">15 days in Los Cabos</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-18-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-18-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$400 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/18">15 days in Greenville</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/18">15 days in Greenville</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-16-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-16-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$320 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/16">7 days in Greenville</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/16">7 days in Greenville</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-15-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-15-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$300 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/15">3 days in Greenville</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/15">3 days in Greenville</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-14-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-14-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$180 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/14">3 days in Bangkok</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/14">3 days in Bangkok</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-13-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-13-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$200 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/13">7 days in Bangkok</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/13">7 days in Bangkok</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-8-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-8-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$500 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/8">30 days in Buenos Aires</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/8">30 days in Buenos Aires</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-4-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-4-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$250 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/4">7 days in Buenos Aires</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/4">7 days in Buenos Aires</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
                         </div>
                                                 <div class="featured-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="featured-photo left">
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/package-3-thumb.jpg" alt="">
+                                <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-3-thumb.jpg" alt="">
                                 <span class="price" style="background: ##3367c1;">$200 / person</span>
                             </div>
                             <div class="featured-text">
-                                <h4><a href="https://scriptsnest.com/travelfresh/package/3">3 days in Buenos Aires</a></h4>
+                                <h4><a href="https://demo.phpscriptpoint.com/travelfresh/package/3">3 days in Buenos Aires</a></h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens ...                                </p>
                             </div>
@@ -365,7 +375,7 @@
 
 
 
-<div class="counterup-area pt_70 pb_100" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/counter.jpg)">
+<div class="counterup-area pt_70 pb_100" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/counter.jpg)">
     <div class="bg-counterup"></div>
     <div class="container wow fadeIn">
         <div class="row">
@@ -419,76 +429,73 @@
             </div>
         </div>
         <div class="row mt_10">
-                            <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
+
+{% for destination in distination %}
+
+                                <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
                     <div class="portfolio-item mt_30">
                         <div class="portfolio-bg"></div>
-                        <img src="https://scriptsnest.com/travelfresh/public/uploads/destination-1-thumb.jpg" alt="">
+                          {% if destination['images']|length > 0 %}
+            {% set firstImage = destination['images'][0] %}
+            {% if firstImage['name'] is defined  %}
+                        <img src="http://localhost:8001/attchments/destinations/{{firstImage['name'] }}" alt="">
+                          {% endif %}  {% endif %}
                         <div class="portfolio-text">
-                            <a href="https://scriptsnest.com/travelfresh/public/uploads/destination-1.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-2.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
                         </div>
                     </div>
                     <div class="photo-title">
-                        <a href="https://scriptsnest.com/travelfresh/destination/view/1">Bangkok, Thailand</a>
+                     {% if destination['@id'] is defined %}
+                        <a href="{{ path('app_offres', { 'id': destination['@id'] }) }}">{{ destination['ville']['name'] }}, {{ destination['pays']['name'] }}</a>
+                    {% endif %}</div>
+                </div>
+                {% endfor %}
+                                <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
+                    <div class="portfolio-item mt_30">
+                        <div class="portfolio-bg"></div>
+                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-3-thumb.jpg" alt="">
+                        <div class="portfolio-text">
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-3.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-title">
+                        <a href="#">Buenos Aires, Argentina</a>
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
                     <div class="portfolio-item mt_30">
                         <div class="portfolio-bg"></div>
-                        <img src="https://scriptsnest.com/travelfresh/public/uploads/destination-2-thumb.jpg" alt="">
+                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-4-thumb.jpg" alt="">
                         <div class="portfolio-text">
-                            <a href="https://scriptsnest.com/travelfresh/public/uploads/destination-2.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-4.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
                         </div>
                     </div>
                     <div class="photo-title">
-                        <a href="https://scriptsnest.com/travelfresh/destination/view/2">Greenville, South Carolina</a>
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/destination/view/4">Los Cabos, Mexico</a>
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
                     <div class="portfolio-item mt_30">
                         <div class="portfolio-bg"></div>
-                        <img src="https://scriptsnest.com/travelfresh/public/uploads/destination-3-thumb.jpg" alt="">
+                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-5-thumb.jpg" alt="">
                         <div class="portfolio-text">
-                            <a href="https://scriptsnest.com/travelfresh/public/uploads/destination-3.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-5.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
                         </div>
                     </div>
                     <div class="photo-title">
-                        <a href="https://scriptsnest.com/travelfresh/destination/view/3">Buenos Aires, Argentina</a>
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/destination/view/5">Marrakesh, Morocco</a>
                     </div>
                 </div>
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
                     <div class="portfolio-item mt_30">
                         <div class="portfolio-bg"></div>
-                        <img src="https://scriptsnest.com/travelfresh/public/uploads/destination-4-thumb.jpg" alt="">
+                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-6-thumb.jpg" alt="">
                         <div class="portfolio-text">
-                            <a href="https://scriptsnest.com/travelfresh/public/uploads/destination-4.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-6.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
                         </div>
                     </div>
                     <div class="photo-title">
-                        <a href="https://scriptsnest.com/travelfresh/destination/view/4">Los Cabos, Mexico</a>
-                    </div>
-                </div>
-                                <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
-                    <div class="portfolio-item mt_30">
-                        <div class="portfolio-bg"></div>
-                        <img src="https://scriptsnest.com/travelfresh/public/uploads/destination-5-thumb.jpg" alt="">
-                        <div class="portfolio-text">
-                            <a href="https://scriptsnest.com/travelfresh/public/uploads/destination-5.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="photo-title">
-                        <a href="https://scriptsnest.com/travelfresh/destination/view/5">Marrakesh, Morocco</a>
-                    </div>
-                </div>
-                                <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
-                    <div class="portfolio-item mt_30">
-                        <div class="portfolio-bg"></div>
-                        <img src="https://scriptsnest.com/travelfresh/public/uploads/destination-6-thumb.jpg" alt="">
-                        <div class="portfolio-text">
-                            <a href="https://scriptsnest.com/travelfresh/public/uploads/destination-6.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="photo-title">
-                        <a href="https://scriptsnest.com/travelfresh/destination/view/6">Salina Island, Italy</a>
+                        <a href="https://demo.phpscriptpoint.com/travelfresh/destination/view/6">Salina Island, Italy</a>
                     </div>
                 </div>
                         </div>
@@ -511,29 +518,16 @@
         <div class="row">
             <div class="col-md-12 mt_30">
                 <div class="team-carousel owl-carousel">                    
-                                            <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-1-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/1">Danny Ashton</a>
-                                <p>Businessman</p>
-                            </div>
-                        </div>
+                                           
+                        {% for member in teamMembers %}
                                                 <div class="team-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="team-photo">
                                 <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-2-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
+                              {% if member.image is defined %}
+               
+                  <img src="http://localhost:8001/attchments/members/{{ member.image }}" alt="{{ member.name }}" width="300" height="200" style="height: 260px !important;width: 300px !important">
+
+            {% endif %}   <div class="team-social">
                                     <ul>
                                                                                     <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                                                                                             <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -543,118 +537,14 @@
                                 </div>
                             </div>
                             <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/2">Brent Grundy</a>
-                                <p>Businessman</p>
+                                <a href="https://demo.phpscriptpoint.com/travelfresh/team-member/8">{{ member.name }} {{ member.lastName }}</a>
+                                <p>{{ member.specialite }}</p>
                             </div>
                         </div>
-                                                <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-3-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/3">Scott Ford</a>
-                                <p>Businessman</p>
-                            </div>
-                        </div>
-                                                <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-4-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/4">Robert Krol</a>
-                                <p>Teacher</p>
-                            </div>
-                        </div>
-                                                <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-5-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/5">Sal Harvey</a>
-                                <p>Fashion Designer</p>
-                            </div>
-                        </div>
-                                                <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-7-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/7">Harold Hayes</a>
-                                <p>Singer</p>
-                            </div>
-                        </div>
-                                                <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-8-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/8">Terry Spain</a>
-                                <p>Teacher</p>
-                            </div>
-                        </div>
-                                                <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                            <div class="team-photo">
-                                <div class="team-bg"></div>
-                                <img src="https://scriptsnest.com/travelfresh/public/uploads/team-member-9-thumb.jpg" alt="Team Photo">
-                                <div class="team-social">
-                                    <ul>
-                                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                                                                                                            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                                                                                                                                                                                                    </ul>
-                                </div>
-                            </div>
-                            <div class="team-text">
-                                <a href="https://scriptsnest.com/travelfresh/team-member/9">Bryan Dolan</a>
-                                <p>Businessman</p>
-                            </div>
-                        </div>
+                        
+                            
+                        {% endfor %}
+                                   
                                         </div>
             </div>
         </div>
@@ -662,7 +552,7 @@
 </div>
 
 
-<div class="testimonial-area pt_80 pb_80" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/testimonial.jpg)">
+<div class="testimonial-area pt_80 pb_80" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/testimonial.jpg)">
     <div class="bg-testimonial"></div>
     <div class="container wow fadeIn">
         <div class="row">
@@ -679,7 +569,7 @@
             <div class="col-md-12 mt_30">
                 <div class="testimonial-gallery owl-carousel wow fadeIn" data-wow-delay="0.2s">
                                             <div class="testimonial-item">
-                            <div class="testimonial-photo" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/testimonial-2.jpg)"></div>
+                            <div class="testimonial-photo" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/testimonial-2.jpg)"></div>
                             <div class="testimonial-text">
                                 <h2>Robert Krol</h2>
                                 <h3>CEO, ABC Company</h3>
@@ -690,7 +580,7 @@
                             </div>
                         </div>
                                                 <div class="testimonial-item">
-                            <div class="testimonial-photo" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/testimonial-3.jpg)"></div>
+                            <div class="testimonial-photo" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/testimonial-3.jpg)"></div>
                             <div class="testimonial-text">
                                 <h2>Sal Harvey</h2>
                                 <h3>Director, DEF Company</h3>
@@ -701,7 +591,7 @@
                             </div>
                         </div>
                                                 <div class="testimonial-item">
-                            <div class="testimonial-photo" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/testimonial-4.jpg)"></div>
+                            <div class="testimonial-photo" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/testimonial-4.jpg)"></div>
                             <div class="testimonial-text">
                                 <h2>Terry Spain</h2>
                                 <h3>Founder, XYZ Company</h3>
@@ -734,9 +624,9 @@
             <div class="col-md-12 mt_50">
                 <div class="blog-carousel owl-carousel">
                                             <div class="blog-item wow fadeIn" data-wow-delay="0.1s">
-                            <a href="https://scriptsnest.com/travelfresh/news/view/4">
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/4">
                                 <div class="blog-image">
-                                    <img src="{{ asset('assets/imageApp/pofile.jpg') }}" alt="Blog Image">
+                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/news-4.jpg" alt="Blog Image">
                                     <div class="date">
                                         <h3>03</h3>
                                         <h4>
@@ -745,18 +635,18 @@
                                 </div>
                             </a>
                             <div class="blog-text">
-                                <a class="b-head" href="https://scriptsnest.com/travelfresh/news/view/4">Ei qui possim abhorreant ei eam iudico disputando</a>
+                                <a class="b-head" href="https://demo.phpscriptpoint.com/travelfresh/news/view/4">Ei qui possim abhorreant ei eam iudico disputando</a>
                                 <p>
                                     Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.                                </p>
                                 <div class="button mt_15">
-                                    <a href="https://scriptsnest.com/travelfresh/news/view/4">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/4">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                                                 <div class="blog-item wow fadeIn" data-wow-delay="0.1s">
-                            <a href="https://scriptsnest.com/travelfresh/news/view/3">
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/3">
                                 <div class="blog-image">
-                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/news-3.jpg" alt="Blog Image">
+                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/news-3.jpg" alt="Blog Image">
                                     <div class="date">
                                         <h3>03</h3>
                                         <h4>
@@ -765,18 +655,18 @@
                                 </div>
                             </a>
                             <div class="blog-text">
-                                <a class="b-head" href="https://scriptsnest.com/travelfresh/news/view/3">Est ei unum illum mucius, nemore alterum corpora at ius</a>
+                                <a class="b-head" href="https://demo.phpscriptpoint.com/travelfresh/news/view/3">Est ei unum illum mucius, nemore alterum corpora at ius</a>
                                 <p>
                                     Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.                                </p>
                                 <div class="button mt_15">
-                                    <a href="https://scriptsnest.com/travelfresh/news/view/3">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/3">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                                                 <div class="blog-item wow fadeIn" data-wow-delay="0.1s">
-                            <a href="https://scriptsnest.com/travelfresh/news/view/2">
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/2">
                                 <div class="blog-image">
-                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/news-2.jpg" alt="Blog Image">
+                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/news-2.jpg" alt="Blog Image">
                                     <div class="date">
                                         <h3>03</h3>
                                         <h4>
@@ -785,18 +675,18 @@
                                 </div>
                             </a>
                             <div class="blog-text">
-                                <a class="b-head" href="https://scriptsnest.com/travelfresh/news/view/2">An usu natum aperiri accommodare, hendrerit tincidunt</a>
+                                <a class="b-head" href="https://demo.phpscriptpoint.com/travelfresh/news/view/2">An usu natum aperiri accommodare, hendrerit tincidunt</a>
                                 <p>
                                     Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.                                </p>
                                 <div class="button mt_15">
-                                    <a href="https://scriptsnest.com/travelfresh/news/view/2">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/2">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                                                 <div class="blog-item wow fadeIn" data-wow-delay="0.1s">
-                            <a href="https://scriptsnest.com/travelfresh/news/view/1">
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/1">
                                 <div class="blog-image">
-                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/news-1.jpg" alt="Blog Image">
+                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/news-1.jpg" alt="Blog Image">
                                     <div class="date">
                                         <h3>03</h3>
                                         <h4>
@@ -805,11 +695,11 @@
                                 </div>
                             </a>
                             <div class="blog-text">
-                                <a class="b-head" href="https://scriptsnest.com/travelfresh/news/view/1">Vis nostro nominati electram ex aeterno voluptatum</a>
+                                <a class="b-head" href="https://demo.phpscriptpoint.com/travelfresh/news/view/1">Vis nostro nominati electram ex aeterno voluptatum</a>
                                 <p>
                                     Ex usu vero quaerendum, mei no falli denique. Purto consul voluptua eos cu, ludus option sensibus ne quo, nec tantas quodsi id. Posse nostro liberavisse eum ut id illum tantas.                                </p>
                                 <div class="button mt_15">
-                                    <a href="https://scriptsnest.com/travelfresh/news/view/1">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="https://demo.phpscriptpoint.com/travelfresh/news/view/1">Read More <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -836,37 +726,37 @@
             <div class="col-md-12 mt_30">
                 <div class="brand-carousel owl-carousel">
                                                 <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-1.png" alt="Client 1">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-1.png" alt="Client 1">
                                                                 
                                     
                             </div>
                                                     <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-2.png" alt="Client 2">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-2.png" alt="Client 2">
                                                                 
                                     
                             </div>
                                                     <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-3.png" alt="Client 3">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-3.png" alt="Client 3">
                                                                 
                                     
                             </div>
                                                     <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-4.png" alt="Client 4">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-4.png" alt="Client 4">
                                                                 
                                     
                             </div>
                                                     <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-5.png" alt="Client 5">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-5.png" alt="Client 5">
                                                                 
                                     
                             </div>
                                                     <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-6.png" alt="Client 6">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-6.png" alt="Client 6">
                                                                 
                                     
                             </div>
                                                     <div class="brand-item wow fadeIn" data-wow-delay="0.1s">
-                                                                    <img src="https://scriptsnest.com/travelfresh/public/uploads/client-7.png" alt="Client 7">
+                                                                    <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/client-7.png" alt="Client 7">
                                                                 
                                     
                             </div>
@@ -875,5 +765,89 @@
         </div>
     </div>
 </div>
+
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-bg"></div>
+    <div class="container wow fadeIn">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline white">
+                    <div class="headline">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit expedita, iure ullam cum vero ex sint aperiam maxime.                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s">
+                <div class="newsletter-message">
+                </div>
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                    <div class="newsletter-submit">
+                        <input type="text" placeholder="Enter Your Email" name="email_subscribe">
+                        <input type="submit" value="Submit" name="form_subscribe">
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://demo.phpscriptpoint.com/travelfresh/public/js/custom.js"></script>
+
+
+
+<script>
+    $(document).on('submit', '#stripe_form', function () {
+        $('#submit-button').prop("disabled", true);
+        $("#msg-container").hide();
+        Stripe.card.createToken({
+            number: $('.card-number').val(),
+            cvc: $('.card-cvc').val(),
+            exp_month: $('.card-expiry-month').val(),
+            exp_year: $('.card-expiry-year').val()
+            // name: $('.card-holder-name').val()
+        }, stripeResponseHandler);
+        return false;
+    });
+    Stripe.setPublishableKey('pk_test_0SwMWadgu8DwmEcPdUPRsZ7b');
+    function stripeResponseHandler(status, response) {
+        if (response.error) {
+            $('#submit-button').prop("disabled", false);
+            $("#msg-container").html('<div style="color: red;border: 1px solid;margin: 10px 0px;padding: 5px;"><strong>Error:</strong> ' + response.error.message + '</div>');
+            $("#msg-container").show();
+        } else {
+            var form$ = $("#stripe_form");
+            var token = response['id'];
+            form$.append("<input type='hidden' name='stripeToken' value='" + token + "' />");
+            form$.get(0).submit();
+        }
+    }
+</script>
+
+<script>
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "3000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+</script>
+
+
 
 {% endblock %}
