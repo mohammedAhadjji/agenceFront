@@ -68,7 +68,8 @@
                                         <div class="form-group">
                                             <label>Total Price (per person)</label>
                                             <div class="mb_5" style="font-size:32px;">
-                                                $400                                            </div>
+                                                {% if offre['prix'] is defined %}
+                ${{offre['prix']}} {% endif %}                                           </div>
                                             <div class="sep mb_10"></div>
                                             <label>Number of Persons</label>
                                             <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;">
@@ -96,7 +97,8 @@
                                             <div class="sep mb_15"></div>
                                             <label>Total Price</label>
                                             <div class="mb_15" style="font-size:32px;">
-                                                $<span id="totalPrice">400</span>
+                                                $<span id="totalPrice">  {% if offre['prix'] is defined %}
+                {{offre['prix']}} {% endif %} </span>
                                             </div>
                                         </div>
                                     </div>                                
