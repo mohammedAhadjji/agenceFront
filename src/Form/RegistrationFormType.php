@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
@@ -30,7 +31,7 @@ class RegistrationFormType extends AbstractType
             ->add('phoneNember', TextType::class, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Phone Number *']
             ])
-            ->add('address', TextType::class, [
+            ->add('address', TextareaType::class, [
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Address *']
             ])
             ->add('ville', TextType::class, [
