@@ -8,7 +8,8 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430";
+  //js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430"; 
+  js.src = "{{ asset('assetes/js/connect.facebook.js') }}";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
     
@@ -438,7 +439,7 @@
                           {% if destination['images']|length > 0 %}
             {% set firstImage = destination['images'][0] %}
             {% if firstImage['name'] is defined  %}
-                        <img src="http://localhost:8001/attchments/destinations/{{firstImage['name'] }}" alt="">
+                        <img src="http://localhost:8001/attchments/destinations/{{firstImage['name'] }}" alt="" style="height: 260px !important;width: 380px !important">
                           {% endif %}  {% endif %}
                         <div class="portfolio-text">
                             <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-2.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
@@ -450,7 +451,7 @@
                     {% endif %}</div>
                 </div>
                 {% endfor %}
-                                <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
+                              {#}  <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
                     <div class="portfolio-item mt_30">
                         <div class="portfolio-bg"></div>
                         <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-3-thumb.jpg" alt="">
@@ -497,7 +498,7 @@
                     <div class="photo-title">
                         <a href="https://demo.phpscriptpoint.com/travelfresh/destination/view/6">Salina Island, Italy</a>
                     </div>
-                </div>
+                </div>#}
                         </div>
     </div>
 </div>

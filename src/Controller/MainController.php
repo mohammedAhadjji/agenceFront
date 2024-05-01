@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\VilleType;
+use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Console\Descriptor\Descriptor;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,14 +23,9 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_main')]
     public function index(): Response
     {
-
-      
-        // Make a GET request to fetch team members
         $response = $this->client->request('GET', 'http://localhost:8001/api/team_members');
-        $teamMembers = $response->toArray();
-
-        // Make a GET request to fetch destinations
         $response2 = $this->client->request('GET', 'http://localhost:8001/api/destinations');
+        $teamMembers = $response->toArray();
         $destination = $response2->toArray();
 
         return $this->render('main/index.html.twig', [
@@ -57,20 +53,11 @@ class MainController extends AbstractController
     public function offers(Request $request): Response
     {
         $id = $request->attributes->get('id');
-
-        // Effectuer une requête HTTP à l'API pour récupérer les offres liées à la destination
         $response = $this->client->request('GET', 'http://localhost:8001' . $id);
         $content = $response->toArray();
-
-        // Traiter le contenu de la réponse
-       
-        // Récupérer les détails de la destination
         $destination = $content;
-       
        // dd($destination);
-      
-        // Vous pouvez maintenant utiliser les offres récupérées dans votre vue Twig ou dans d'autres traitements
-//dd($offers);
+       //dd($offers);
         return $this->render('main/offers.html.twig', [
             'offers' => $destination['offers'],
             'destination' => $destination,
@@ -80,20 +67,13 @@ class MainController extends AbstractController
     public function offer(Request $request): Response
     {
         $id = $request->attributes->get('id');
-        
-        // Effectuer une requête HTTP à l'API pour récupérer les offres liées à la destination
         $response = $this->client->request('GET', 'http://localhost:8001/api/offres/' . $id);
        
         $content = $response->toArray();
-//dd($content);
-        // Traiter le contenu de la réponse
-       
-        // Récupérer les détails de la destination
         $offer = $content;
        // dd($destination);
-     // dd($destination);
-        // Vous pouvez maintenant utiliser les offres récupérées dans votre vue Twig ou dans d'autres traitements
-//dd($offers);
+       // dd($destination);
+       //dd($offers);
         return $this->render('main/offersView.html.twig', [
             'offre' => $offer,
         ]);

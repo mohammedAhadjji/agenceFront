@@ -83,8 +83,8 @@
 <script src="{{ asset('assetes/js/superfish.js') }}"></script>
 
 
-    <script src="https://js.stripe.com/v2/"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="{{ asset('assetes/js/stripe.js') }}"></script>
+    <script src='{{ asset('assetes/js/recaptcha-api.js') }}'></script>
 		<title>
 			{% block title %}home page
 			{% endblock %}
@@ -116,7 +116,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-4">
                     <div class="top-header-right">
                                                     <a href="https://demo.phpscriptpoint.com/travelfresh/traveller/registration"><i class="fa fa-user-plus"></i>Registration</a>
-                            <a href="https://demo.phpscriptpoint.com/travelfresh/traveller/login"><i class="fa fa-user-circle"></i>Login</a>
+                            <a href="{{path('app_login')}}"><i class="fa fa-user-circle"></i>Login</a>
                                                 
                     </div>
                 </div>
