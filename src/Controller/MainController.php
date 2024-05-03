@@ -56,7 +56,7 @@ class MainController extends AbstractController
         $response = $this->client->request('GET', 'http://localhost:8001' . $id);
         $content = $response->toArray();
         $destination = $content;
-       // dd($destination);
+       //dd($destination);
        //dd($offers);
         return $this->render('main/offers.html.twig', [
             'offers' => $destination['offers'],

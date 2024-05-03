@@ -20,9 +20,16 @@
             <span style="font-size: 22px;">{{ offre['prix'] }} / personne</span>
             {% endif %}
             <br>
-            {% if offre['dateEperation'] is defined %}
-                <span style="color:#e05d5d;">(Date de réservation expirée)</span>
-            {% endif %}
+         {% if offre.date_fin is defined %}
+    {% if is_date_expired(offre.date_fin) %}
+        <span style="color:#e05d5d;">(Date de réservation expirée)</span>
+    {% else %}
+        <span style="color:#77d477;">(Available for Booking)</span>
+    {% endif %}
+
+{% endif %}
+
+
         </a>
     </div>
 </div>

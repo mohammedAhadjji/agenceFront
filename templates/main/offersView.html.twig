@@ -60,9 +60,10 @@
                     </div>
                     <div class="row book-now">
                         <div class="col-md-12">
-                            <form action="https://demo.phpscriptpoint.com/travelfresh/payment" class="" method="post" accept-charset="utf-8">
-                                <input type="hidden" name="p_id" value="9">
-                                <input type="hidden" name="p_price_single" value="400">
+                            <form action="#" class="" method="post" accept-charset="utf-8">
+                                <input type="hidden" name="totalamount" value="{{offre['prix']}}" id="amountInput" readonly>
+                                <input type="hidden" name="amount" value="{{offre['prix']}}" readonly>
+                                <input type="hidden" name="Titre" value="{{ offre['Titre'] }}">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">
                                         <div class="form-group">
@@ -72,34 +73,20 @@
                 ${{offre['prix']}} {% endif %}                                           </div>
                                             <div class="sep mb_10"></div>
                                             <label>Number of Persons</label>
-                                            <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                                <option value="11">11</option>
-                                                <option value="12">12</option>
-                                                <option value="13">13</option>
-                                                <option value="14">14</option>
-                                                <option value="15">15</option>
-                                                <option value="16">16</option>
-                                                <option value="17">17</option>
-                                                <option value="18">18</option>
-                                                <option value="19">19</option>
-                                                <option value="20">20</option>
+                                            <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;"onchange="f(event)">
+                                            {% for i in 1..20 %}
+                                                <option value="{{i}}">{{i}}</option>
+                                            {% endfor %}  
                                             </select>
                                             <div class="sep mb_15"></div>
                                             <label>Total Price</label>
-                                            <div class="mb_15" style="font-size:32px;">
-                                                $<span id="totalPrice">  {% if offre['prix'] is defined %}
-                {{offre['prix']}} {% endif %} </span>
-                                            </div>
+                                             <div class="mb_15" style="font-size:32px;">
+                    <span id="amountdiv">
+                        {% if offre['prix'] is defined %}
+                            ${{ offre['prix'] }}
+                        {% endif %}
+                    </span>
+                </div>
                                         </div>
                                     </div>                                
                                 </div>
@@ -116,6 +103,22 @@
         </div>
     </div>
 </div>
+<script>
+    function f(event) {
+        event.preventDefault(); 
+        var numberOfPersons = document.getElementById('numberPerson').value;
+        var amountdiv = document.getElementById('amountdiv');
+        var amountSpan = document.getElementById('amountSpan');
+        {% if offre['prix'] is defined %}
+            var amount = {{ offre['prix'] }}; 
+        {% else %}
+            var amount = 0;
+        {% endif %}
+        var doubledAmount = amount * numberOfPersons;
+        amountdiv.innerText =  "$" + doubledAmount;
+        document.getElementById('amountInput').value = doubledAmount;
+    }
+</script>
 
 
 <div class="featured-detail country-detail pt_0 pb_80" style="background:#fff;">
@@ -155,7 +158,7 @@
                                                             <div class="col-md-4 col-xs-6 clear-three">
                                     <div class="portfolio-item mt_30">
                                         <div class="portfolio-bg"></div>
-                                        <img src="http://localhost:8001/attchments/offers/{{ img['name'] }}" alt="">
+                                        <img src="http://localhost:8001/attchments/offers/{{ img['name'] }}" alt=""style="height: 150px !important;width:100%!important">
                                         <div class="portfolio-text">
                                             <a href="http://localhost:8001/attchments/offers/{{ img['name'] }}" class="magnific"><i class="fa fa-search-plus"></i></a>
                                         </div>
@@ -163,24 +166,7 @@
                                 </div>
                                 
                             {% endfor %}
-                                                                <div class="col-md-4 col-xs-6 clear-three">
-                                    <div class="portfolio-item mt_30">
-                                        <div class="portfolio-bg"></div>
-                                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/41-thumb.jpeg" alt="">
-                                        <div class="portfolio-text">
-                                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/41.jpeg" class="magnific"><i class="fa fa-search-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                <div class="col-md-4 col-xs-6 clear-three">
-                                    <div class="portfolio-item mt_30">
-                                        <div class="portfolio-bg"></div>
-                                        <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/42-thumb.jpg" alt="">
-                                        <div class="portfolio-text">
-                                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/package_photos/42.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                                                
                                                         </div>
 
                                             </div>
