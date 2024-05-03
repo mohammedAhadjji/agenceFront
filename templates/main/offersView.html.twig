@@ -1,5 +1,21 @@
 {% extends 'base.html.twig' %}  
+
+
+
+
 {% block body %}
+<style>
+.attchment{
+height: 200px !important;
+width:100%!important;
+}
+@media only screen and (max-width:767px){
+.attchment{
+height: 110px !important;
+width:100%!important;
+}
+}
+</style>
 <div class="banner-slider high-banner" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-banner-9.jpg)">
     <div class="bg"></div>
     <div class="bannder-table">
@@ -158,7 +174,7 @@
                                                             <div class="col-md-4 col-xs-6 clear-three">
                                     <div class="portfolio-item mt_30">
                                         <div class="portfolio-bg"></div>
-                                        <img src="http://localhost:8001/attchments/offers/{{ img['name'] }}" alt=""style="height: 150px !important;width:100%!important">
+                                        <img src="http://localhost:8001/attchments/offers/{{ img['name'] }}" alt="" class="attchment" >
                                         <div class="portfolio-text">
                                             <a href="http://localhost:8001/attchments/offers/{{ img['name'] }}" class="magnific"><i class="fa fa-search-plus"></i></a>
                                         </div>

@@ -9,6 +9,7 @@ use App\Security\SecuretyAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mime\Address;
@@ -16,14 +17,18 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 class RegistrationController extends AbstractController
 {
     private EmailVerifier $emailVerifier;
+    private $client;
 
-    public function __construct(EmailVerifier $emailVerifier)
+
+    public function __construct(EmailVerifier $emailVerifier,HttpClientInterface $client)
     {
+        $this->client = $client;	
         $this->emailVerifier = $emailVerifier;
     }
 
@@ -42,7 +47,17 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+            $response = $this->client->request('POST', 'http://localhost:8001/api/clients', [
+                'json' => [
+                    'fullName' => $user->getFullName(),
+                    'email' => $user->getEmail(),
+                    'phoneNumber' => $user->getPhoneNember(),
+                    'address' => $user->getAddress(),
+                    'ville' => $user->getVille(),
+                    'pays' => $user->getPays(),
+                    // Ajoutez d'autres champs selon vos besoins
+                ],
+            ]);
             $entityManager->persist($user);
             $entityManager->flush();
 
