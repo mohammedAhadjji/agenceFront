@@ -29,12 +29,15 @@ class MainController extends AbstractController
     {
         $response = $this->client->request('GET', 'http://localhost:8001/api/team_members');
         $response2 = $this->client->request('GET', 'http://localhost:8001/api/destinations');
+        $response3 = $this->client->request('GET', 'http://localhost:8001/api/services');
         $teamMembers = $response->toArray();
         $destination = $response2->toArray();
-
+        $services = $response3->toArray();
+      //  dd($services);
         return $this->render('main/index.html.twig', [
             'teamMembers' => $teamMembers['hydra:member'],
-            "distination" => $destination['hydra:member']
+            "distination" => $destination['hydra:member'],
+            "services" => $services['hydra:member']
         ]);
     }
 

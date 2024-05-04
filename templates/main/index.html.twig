@@ -88,18 +88,27 @@
             </div>
         </div>
         <div class="row">
+         {% include 'partiels/_service.html.twig'  with {
+    services : services
+} %}
+         {# for service in services %}
+            
+       
                             <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-1.jpg)">
-                        <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/1">
-                            <i class="fa fa-globe"></i>
-                            <div class="ser-text">
-                                <h4>International Tour</h4>
-                                <p>
-                                    Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu.                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+    <div class="service-item mt_30" style="background-image: url('http://localhost:8001/attchments/services/{{ service['image'] }}')">
+        <a href="{{ path('app_service_view', {'id': service.id}) }}">
+            <img src="http://localhost:8001/attchments/services/{{ service.icon }}" alt="Icone du service" style="
+    max-width: 23%;
+    height: auto;">
+            <div class="ser-text">
+                <h4>{{ service.name }}</h4>
+                <p>{{ service.content[:120]|raw }}</p>
+
+            </div>
+        </a>
+    </div>
+</div> {% endfor #}
+
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
                     <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-2.jpg)">
                         <a href="https://demo.phpscriptpoint.com/travelfresh/service/view/2">
@@ -519,8 +528,10 @@
         <div class="row">
             <div class="col-md-12 mt_30">
                 <div class="team-carousel owl-carousel">                    
-                                           
-                        {% for member in teamMembers %}
+                                          {% include 'partiels/_member.html.twig'  with {
+    teamMembers : teamMembers
+} %}   
+                        {# for member in teamMembers %}
                                                 <div class="team-item wow fadeIn" data-wow-delay="0.1s">
                             <div class="team-photo">
                                 <div class="team-bg"></div>
@@ -544,7 +555,7 @@
                         </div>
                         
                             
-                        {% endfor %}
+                        {% endfor #}
                                    
                                         </div>
             </div>
