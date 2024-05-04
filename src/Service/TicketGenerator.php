@@ -1,6 +1,7 @@
 <?php
 namespace App\Service;
 
+use Symfony\Component\HttpFoundation\Response;
 use TCPDF;
 
 class TicketGenerator
@@ -47,7 +48,12 @@ class TicketGenerator
         $pdf->Cell(0, 10, 'Détails de l\'achat', 0, 1, 'L');
         $pdf->Cell(0, 10, 'Montant: $' . $amount, 0, 1, 'L');
 
+        $response = new Response($pdf->Output('ticket.pdf', 'S'));
+        $response->headers->set('Content-Type', 'application/pdf');
+        $response->headers->set('Content-Disposition', 'attachment; filename="ticket.pdf"');
+
+        return $response;
         // Renvoyez le PDF en tant que chaîne binaire
-        return $pdf->Output('ticket.pdf', 'S');
+       // return $pdf->Output('ticket.pdf', 'S');
     }
 }

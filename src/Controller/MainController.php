@@ -38,31 +38,46 @@ class MainController extends AbstractController
         ]);
     }
 
+
     #[Route('/app', name: 'app')]
     public function test(Request $request): Response
     {
-        $form = $this->createForm(VilleType::class);
-if ($this->getUser()) {
-        // Supposons que vous récupériez l'utilisateur connecté
-        $user = $this->getUser();
-        $fullName = $user->getFullName();
-        $email = $user->getEmail();
-        $address = $user->getAddress();
-
-        // Récupérer le montant à partir de la session ou d'une autre source
-        $amount = 100; // Remplacez ceci par la méthode appropriée pour obtenir le montant
-
-        // Générer le ticket en utilisant le service TicketGenerator
-        $pdfContent = $this->ticketGenerator->generateTicket($fullName, $email, $address, $amount);
-
-        // Retourner le contenu PDF en tant que réponse
-        return new Response($pdfContent, 200, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="ticket.pdf"'
-        ]);
-}
+        // Votre code existant pour récupérer les informations de l'utilisateur
+    
+        if ($this->getUser()) {
+            // Supposons que vous récupériez l'utilisateur connecté
+            $user = $this->getUser();
+            $fullName = $user->getFullName();
+            $email = $user->getEmail();
+            $address = $user->getAddress();
+    
+            // Récupérer le montant à partir de la session ou d'une autre source
+            $amount = 100; // Remplacez ceci par la méthode appropriée pour obtenir le montant
+    
+            // Générer le ticket en utilisant le service TicketGenerator
+            $pdfContent = $this->ticketGenerator->generateTicket($fullName, $email, $address, $amount);
+    
+            // Retourner le contenu PDF en tant que réponse
+            $response = new Response($pdfContent, 200, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'attachment; filename="ticket.pdf"'
+            ]);
+    
+            // Forcer le téléchargement automatique du fichier PDF dans le navigateur
+            $response->headers->set('Content-Disposition', 'attachment; filename="ticket.pdf"');
+            $response = $response->send();
+            $response->sendHeaders();
+            $response->setContent($pdfContent);
+            $response->sendContent();
+            
+            // Ensuite, effectuez une redirection JavaScript vers la route /tick
+            
+        } else {
+            return $this->redirectToRoute('app_main');
+        }
         // Reste du code non exécuté après le retour de la réponse
     }
+    
     
     #[Route('/destination/views{id<.+>}', name: 'app_offres')]
     public function offers(Request $request): Response
@@ -77,6 +92,12 @@ if ($this->getUser()) {
             'offers' => $destination['offers'],
             'destination' => $destination,
         ]);
+    }
+    #[Route('/tick', name: 'app_tick')]
+    public function tick(Request $request): Response
+    {
+        
+        return $this->render('main/tick.html.twig');
     }
     #[Route('/offer/views/{id}', name: 'app_offre_view')]
     public function offer(Request $request): Response
