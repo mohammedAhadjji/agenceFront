@@ -3,28 +3,27 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class DistinationController extends AbstractController
+class MemberController extends AbstractController
 {
     private $client;
-   
-
-
     public function __construct(HttpClientInterface $client)
     {
         $this->client = $client;
-      
     }
-    #[Route('/distination', name: 'app_distination')]
+
+
+    #[Route('/member', name: 'app_member')]
     public function index(): Response
     {
-        $response2 = $this->client->request('GET', 'http://localhost:8001/api/destinations');
-        $destination = $response2->toArray();
-        return $this->render('distination/index.html.twig', [
-            "destination" => $destination['hydra:member'],
+        $response = $this->client->request('GET', 'http://localhost:8001/api/team_members');
+        $teamMembers = $response->toArray();
+        return $this->render('member/index.html.twig', [
+            'teamMembers' => $teamMembers['hydra:member'],
         ]);
     }
 }

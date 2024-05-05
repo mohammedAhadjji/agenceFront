@@ -12,80 +12,28 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
     
-   
+   <div class="banner-slider" style="background-image: url({{ asset('assetes/imageApp/banner_service.jpg') }})">
+	<div class="bg"></div>
+	<div class="bannder-table">
+		<div class="banner-text">
+			<h1>Our Services</h1>
+		</div>
+	</div>
+</div>
 
 <div class="service-area pt_50 pb_80">
 	<div class="container wow fadeIn">
 		<div class="row">
-							<div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-					<div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-1.jpg)">
-						<a href="https://scriptsnest.com/travelfresh/service/view/1">
-								<i class="fa fa-cubes"></i>
-								<div class="ser-text">
-									<h4>International Tour</h4>
-									<p>
-										Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu.									</p>
-								</div>
-							</a>
-					</div>
-				</div>
 								 {% include 'partiels/_service.html.twig'  with {
     services : services
 } %}
-								<div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-					<div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-3.jpg)">
-						<a href="https://scriptsnest.com/travelfresh/service/view/3">
-								<i class="fa fa-cubes"></i>
-								<div class="ser-text">
-									<h4>Business Tour</h4>
-									<p>
-										Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu.									</p>
-								</div>
-							</a>
-					</div>
-				</div>
-								<div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-					<div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-4.jpg)">
-						<a href="https://scriptsnest.com/travelfresh/service/view/4">
-								<i class="fa fa-cubes"></i>
-								<div class="ser-text">
-									<h4>Domestic Tour</h4>
-									<p>
-										Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu.									</p>
-								</div>
-							</a>
-					</div>
-				</div>
-								<div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-					<div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-5.jpg)">
-						<a href="https://scriptsnest.com/travelfresh/service/view/5">
-								<i class="fa fa-cubes"></i>
-								<div class="ser-text">
-									<h4>Medical Tour</h4>
-									<p>
-										Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu.									</p>
-								</div>
-							</a>
-					</div>
-				</div>
-								<div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
-					<div class="service-item mt_30" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/service-6.jpg)">
-						<a href="https://scriptsnest.com/travelfresh/service/view/6">
-								<i class="fa fa-cubes"></i>
-								<div class="ser-text">
-									<h4>Religious Tour</h4>
-									<p>
-										Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu.									</p>
-								</div>
-							</a>
-					</div>
-				</div>
+								
 						</div>
 	</div>
 </div>
-<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
 <div class="newsletter-bg"></div>
-    <div class="container wow fadeIn">
+    <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
     <div class="row">
             <div class="col-md-12">
                 <div class="main-headline white">
@@ -98,10 +46,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
                 <div class="newsletter-message">
                 </div>
-                <form action="https://scriptsnest.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
                     <div class="newsletter-submit">
                         <input type="text" placeholder="Enter Your Email" name="email_subscribe">
                         <input type="submit" value="Submit" name="form_subscribe">

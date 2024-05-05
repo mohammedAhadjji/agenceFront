@@ -16,7 +16,7 @@ width:100%!important;
 }
 }
 </style>
-<div class="banner-slider high-banner" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/package-banner-9.jpg)">
+<div class="banner-slider high-banner" style="background-image: url({{ asset('assetes/imageApp/banner_service.jpg') }})">
     <div class="bg"></div>
     <div class="bannder-table">
         <div class="banner-text">
@@ -47,9 +47,9 @@ width:100%!important;
                                 <th>Last Booking Date</th>
                             </tr>
                             <tr>
-                                <td><span style="font-size:20px;"><b>2030-02-12</b></span></td>
-                                <td><span style="font-size:20px;"><b>2030-02-18</b></span></td>
-                                                                    <td><span style="font-size:20px;color:green;"><b>2030-02-06</b></span></td>
+                                <td><span style="font-size:20px;"><b>{{offre.date_debut| date('Y-m-d')}}</b></span></td>
+                                <td><span style="font-size:20px;"><b>{{offre.date_fin| date('Y-m-d')}}</b></span></td>
+                                                                    <td><span style="font-size:20px;color:green;"><b>{{offre.dateEperation| date('Y-m-d')}}</b></span></td>
                                                             </tr>
                         </table>
                     </div>

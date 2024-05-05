@@ -1,0 +1,21 @@
+
+{% for destination in destination %}
+
+                                <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
+                    <div class="portfolio-item mt_30">
+                        <div class="portfolio-bg"></div>
+                          {% if destination['images']|length > 0 %}
+            {% set firstImage = destination['images'][0] %}
+            {% if firstImage['name'] is defined  %}
+                        <img src="http://localhost:8001/attchments/destinations/{{firstImage['name'] }}" alt="" style="height: 260px !important;width: 380px !important">
+                          {% endif %}  {% endif %}
+                        <div class="portfolio-text">
+                            <a href="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-2.jpg" class="magnific"><i class="fa fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="photo-title">
+                     {% if destination['@id'] is defined %}
+                        <a href="{{ path('app_offres', { 'id': destination['@id'] }) }}">{{ destination['ville']['name'] }}, {{ destination['pays']['name'] }}</a>
+                    {% endif %}</div>
+                </div>
+                {% endfor %}

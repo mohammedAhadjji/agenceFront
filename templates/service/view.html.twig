@@ -1,1 +1,87 @@
 {% extends 'base.html.twig' %}
+
+{% block title %}{{ service.name }}{% endblock %}
+
+{% block body %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=323620764400430";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+   <div class="banner-slider" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-banner-1.jpg)">
+	<div class="bg"></div>
+	<div class="bannder-table">
+		<div class="banner-text">
+			<h1>{{ service.name }}</h1>
+		</div>
+	</div>
+</div>
+<div class="single-service-area pt_50 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			<div class="col-md-8 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+				<div class="service-content mt_30">
+					<div class="service-photo-item">
+						<img src="http://localhost:8001/attchments/services/{{ service['image'] }}" alt="{{ service.name }}" style="max-width: 100%;height: auto;">
+					</div>
+					<div class="row">
+						<div class="col-sm-12 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+							<div class="service-details headstyle mt_30">
+								<p>{{ service.content|raw }}</p>							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+				<div class="service-sidebar mt_30">
+					<div class="service-widget service-list headstyle">
+						<h4>All Services</h4>
+						<ul>
+                        
+                        {% for serv in services %}
+                        {% if serv.name == service.name %}
+                            <li class="active"><a href="{{ path('app_service_view', {'id': serv.id}) }}">{{ serv.name }}</a></li>
+                        {% else %}
+                        <li class=""><a href="{{ path('app_service_view', {'id': serv.id}) }}">{{ serv.name }}</a></li>
+                        {% endif %}							
+                        {% endfor %}	
+                        </ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-bg"></div>
+    <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline white">
+                    <div class="headline">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit expedita, iure ullam cum vero ex sint aperiam maxime.                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                <div class="newsletter-message">
+                </div>
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                    <div class="newsletter-submit">
+                        <input type="text" placeholder="Enter Your Email" name="email_subscribe">
+                        <input type="submit" value="Submit" name="form_subscribe">
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

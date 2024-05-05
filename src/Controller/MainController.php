@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\VilleType;
@@ -36,7 +37,7 @@ class MainController extends AbstractController
       //  dd($services);
         return $this->render('main/index.html.twig', [
             'teamMembers' => $teamMembers['hydra:member'],
-            "distination" => $destination['hydra:member'],
+            "destination" => $destination['hydra:member'],
             "services" => $services['hydra:member']
         ]);
     }
@@ -112,7 +113,7 @@ class MainController extends AbstractController
         $offer = $content;
        // dd($destination);
        // dd($destination);
-       //dd($offers);
+       //dd($offer);
         return $this->render('main/offersView.html.twig', [
             'offre' => $offer,
         ]);

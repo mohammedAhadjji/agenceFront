@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MemberController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<div class="banner-slider" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/banner_team.jpg)">
+	<div class="bg"></div>
+	<div class="bannder-table">
+		<div class="banner-text">
+			<h1>Our Team</h1>
+		</div>
+	</div>
+</div>
+
+
+<div class="team-area pt_50 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			
+				
+				 {% for member in teamMembers %}
+				<div class="col-md-3 col-sm-4 col-xs-6 clear-four wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+					<div class="team-item mt_30">
+						<div class="team-photo">
+							<div class="team-bg"></div>
+							<img src="http://localhost:8001/attchments/members/{{ member.image }}" alt="{{ member.name }}" alt="Team Photo">
+							<div class="team-social">
+								<ul>
+																			<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+																												<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+																												<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+																												<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+																																												</ul>
+							</div>
+						</div>
+						<div class="team-text">
+							<a href="https://demo.phpscriptpoint.com/travelfresh/team-member/8">{{ member.name }} {{ member.lastName }}</a>
+							<p>{{ member.specialite }}</p>
+						</div>
+					</div>
+				</div>
+               
+				{% endfor %}
+				
+				</div>
+						</div>
+	</div>
+</div>
+
+
+
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-bg"></div>
+    <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline white">
+                    <div class="headline">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit expedita, iure ullam cum vero ex sint aperiam maxime.                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                <div class="newsletter-message">
+                </div>
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                    <div class="newsletter-submit">
+                        <input type="text" placeholder="Enter Your Email" name="email_subscribe">
+                        <input type="submit" value="Submit" name="form_subscribe">
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

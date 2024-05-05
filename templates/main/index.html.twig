@@ -107,7 +107,7 @@
             </div>
         </a>
     </div>
-</div> {% endfor #}
+</div> {% endfor %}
 
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn" data-wow-delay="0.1s">
                     <div class="service-item mt_30" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-2.jpg)">
@@ -168,7 +168,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div>#}
                         </div>
     </div>
 </div>
@@ -439,7 +439,10 @@
             </div>
         </div>
         <div class="row mt_10">
-
+         {% include 'partiels/_destination.html.twig'  with {
+    destination : destination
+} %}
+ {#}
 {% for destination in distination %}
 
                                 <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
@@ -460,7 +463,8 @@
                     {% endif %}</div>
                 </div>
                 {% endfor %}
-                              {#}  <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
+                
+                               <div class="col-md-4 col-xs-6 clear-three wow fadeIn">
                     <div class="portfolio-item mt_30">
                         <div class="portfolio-bg"></div>
                         <img src="https://demo.phpscriptpoint.com/travelfresh/public/uploads/destination-3-thumb.jpg" alt="">
