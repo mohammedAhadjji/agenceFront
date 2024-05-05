@@ -205,15 +205,15 @@ width:100%!important;
                             <table class="table table-bordered table-striped">
                                                                 <tr>
                                     <th>Tour Start Date</th>
-                                    <td>2030-02-12</td>
+                                    <td>{{offre.date_debut| date('Y-m-d')}}</td>
                                 </tr>
                                 <tr>
                                     <th>Tour End Date</th>
-                                    <td>2030-02-18</td>
+                                    <td>{{offre.date_fin | date('Y-m-d')}}</td>
                                 </tr>
                                 <tr>
                                     <th>Last Booking Date</th>
-                                    <td>2030-02-06</td>
+                                    <td>{{offre.dateEperation| date('Y-m-d')}}</td>
                                 </tr>
                                                                 <tr>
                                     <th>Address in Map</th>

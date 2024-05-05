@@ -812,57 +812,6 @@
 
 
 
-<script src="https://demo.phpscriptpoint.com/travelfresh/public/js/custom.js"></script>
-
-
-
-<script>
-    $(document).on('submit', '#stripe_form', function () {
-        $('#submit-button').prop("disabled", true);
-        $("#msg-container").hide();
-        Stripe.card.createToken({
-            number: $('.card-number').val(),
-            cvc: $('.card-cvc').val(),
-            exp_month: $('.card-expiry-month').val(),
-            exp_year: $('.card-expiry-year').val()
-            // name: $('.card-holder-name').val()
-        }, stripeResponseHandler);
-        return false;
-    });
-    Stripe.setPublishableKey('pk_test_0SwMWadgu8DwmEcPdUPRsZ7b');
-    function stripeResponseHandler(status, response) {
-        if (response.error) {
-            $('#submit-button').prop("disabled", false);
-            $("#msg-container").html('<div style="color: red;border: 1px solid;margin: 10px 0px;padding: 5px;"><strong>Error:</strong> ' + response.error.message + '</div>');
-            $("#msg-container").show();
-        } else {
-            var form$ = $("#stripe_form");
-            var token = response['id'];
-            form$.append("<input type='hidden' name='stripeToken' value='" + token + "' />");
-            form$.get(0).submit();
-        }
-    }
-</script>
-
-<script>
-    toastr.options = {
-        "closeButton": false,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": true,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "3000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    }
-</script>
 
 
 
