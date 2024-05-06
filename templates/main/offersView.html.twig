@@ -108,7 +108,12 @@ width:100%!important;
                                 </div>
                                 
                                                                 <div class="form-group">
-                                    <button class="btn btn-info btn-lg" type="submit" name="form_book">Book Your Seat</button>
+                                                                 {% if is_date_expired(offre.dateEperation) %}
+        <button class="btn btn-info btn-lg" type="submit" name="form_book" disabled>Book Your Seat</button>
+    {% else %}
+         <button class="btn btn-info btn-lg" type="submit" name="form_book">Book Your Seat</button>
+    {% endif %}
+                                   
                                 </div>
                                 
                             </form>                        </div>

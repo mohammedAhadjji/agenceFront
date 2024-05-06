@@ -3,6 +3,14 @@
 {% block title %}Hello ContactController!{% endblock %}
 
 {% block body %}
+ <div class="banner-slider" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/service-banner-1.jpg)">
+	<div class="bg"></div>
+	<div class="bannder-table">
+		<div class="banner-text">
+			<h1>contact</h1>
+		</div>
+	</div>
+</div>
 <div class="contact-area bg-area pt_50 pb_80">
     <div class="container wow fadeIn">
         <div class="row">
@@ -11,23 +19,28 @@
                     <div class="headstyle">
                         <h4>Contact Form</h4>
                     </div>
-                    <form action="https://scriptsnest.com/travelfresh/contact/send_email" class="" method="post" accept-charset="utf-8">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Full Name" name="name">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Phone Number" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email Address" name="email">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Message" name="message" style="height:195px;"></textarea>
-                            </div>
-                                                        <button type="submit" class="btn btn-primary" name="form_contact">Submit</button>
-                        </div>
-                    </form>                </div>
+{{ form_start(form, {'attr': {'class': 'form-row'}}) }}
+
+    <div class="form-group">
+        {{ form_row(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Full Name'}}) }}
+    </div>
+    
+    <div class="form-group">
+        {{ form_row(form.phone, {'attr': {'class': 'form-control', 'placeholder': 'Phone Number'}}) }}
+    </div>
+    
+    <div class="form-group">
+        {{ form_row(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email Address'}}) }}
+    </div>
+    
+    <div class="form-group">
+        {{ form_row(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Message', 'style': 'height:195px;'}}) }}
+    </div>
+    
+    <button type="submit" class="btn btn-primary" name="form_contact">Submit</button>
+
+{{ form_end(form) }}
+              </div>
             </div>
             <div class="col-md-5 mt_30 wow fadeIn" data-wow-delay="0.1s">
                 <div class="headstyle">
@@ -73,14 +86,15 @@ Office 2: 963-612-1782                                </p>
                     <div class="headstyle">
                         <h4>Map Location</h4>
                     </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.3833161665298!2d-118.03745848530627!3d33.85401093559897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2c6c97f8f3ed%3A0x47b1bde165dcc056!2sOak+Dr%2C+La+Palma%2C+CA+90623%2C+USA!5e0!3m2!1sen!2sbd!4v1544238752504" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                </div>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.8966627296795!2d-1.9103156245440802!3d34.65731258554008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd787ca7abf0facf%3A0x5ea075eea8038ba1!2sEHEI%20%3A%20%C3%89cole%20des%20Hautes%20%C3%89tudes%20d&#39;Ing%C3%A9nierie%20Oujda!5e0!3m2!1sfr!2sma!4v1713802961804!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://scriptsnest.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
 <div class="newsletter-bg"></div>
-    <div class="container wow fadeIn">
+    <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
     <div class="row">
             <div class="col-md-12">
                 <div class="main-headline white">
@@ -93,83 +107,15 @@ Office 2: 963-612-1782                                </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
                 <div class="newsletter-message">
                 </div>
-                <form action="https://scriptsnest.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
                     <div class="newsletter-submit">
                         <input type="text" placeholder="Enter Your Email" name="email_subscribe">
                         <input type="submit" value="Submit" name="form_subscribe">
                     </div>
                 </form>            </div>
-        </div>
-    </div>
-</div>
-
-<div class="footer-area pt_50 pb_80">
-    <div class="container wow fadeIn">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="footer-item mt_30">
-                    <h3>Upcoming Tours</h3>
-                    <ul>
-                                                    <li><a href="https://scriptsnest.com/travelfresh/package/36">15 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/35">12 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/34">7 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/33">3 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/31">7 days in Marrakesh</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/30">12 days in Marrakesh</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/29">15 days in Marrakesh</a></li>
-                                                </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                <div class="footer-item mt_30">
-                    <h3>Featured Tours</h3>
-                    <ul>
-                                                    <li><a href="https://scriptsnest.com/travelfresh/package/38">30 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/35">12 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/33">3 days in Salina Island</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/31">7 days in Marrakesh</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/29">15 days in Marrakesh</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/27">30 days in Marrakesh</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/package/26">3 days in Los Cabos</a></li>
-                                                </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                <div class="footer-item mt_30">
-                    <h3>Recent News</h3>
-                    <ul>
-                                                    <li><a href="https://scriptsnest.com/travelfresh/news/view/4">Ei qui possim abhorreant ei eam iudico disputando</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/news/view/3">Est ei unum illum mucius, nemore alterum corpora at ius</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/news/view/2">An usu natum aperiri accommodare, hendrerit tincidunt</a></li>
-                                                        <li><a href="https://scriptsnest.com/travelfresh/news/view/1">Vis nostro nominati electram ex aeterno voluptatum</a></li>
-                                                </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
-                <div class="footer-item mt_30">
-                    <h3>Address</h3>
-                    <div class="footer-address-item">
-                        <div class="icon"><i class="fa fa-map-marker"></i></div>
-                        <div class="text"><span>3153 Foley Street<br />
-Miami, FL 33176</span></div>
-                    </div>
-                    <div class="footer-address-item">
-                        <div class="icon"><i class="fa fa-phone"></i></div>
-                        <div class="text"><span>Sales: 954-648-1802<br />
-Support: 963-612-1782</span></div>
-                    </div>
-                    <div class="footer-address-item">
-                        <div class="icon"><i class="fa fa-envelope-o"></i></div>
-                        <div class="text"><span>sales@yourwebsite.com<br />
-support@yourwebsite.com</span></div>
-                    </div>
-                    <ul class="footer-social">
-                        <li><a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li><li><a href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li><li><a href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li><li><a href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li><li><a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </div>

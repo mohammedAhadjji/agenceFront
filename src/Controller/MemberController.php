@@ -26,4 +26,14 @@ class MemberController extends AbstractController
             'teamMembers' => $teamMembers['hydra:member'],
         ]);
     }
+    #[Route('/member/{id}', name: 'app_member_view')]
+    public function view(Request $request): Response
+    {
+        $id=$request->attributes->get('id');
+        $response = $this->client->request('GET', 'http://localhost:8001/api/team_members'.$id);
+        $teamMembers = $response->toArray();
+        return $this->render('member/index.html.twig', [
+            'teamMember' => $teamMembers,
+        ]);
+    }
 }
