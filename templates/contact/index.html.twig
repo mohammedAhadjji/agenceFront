@@ -18,6 +18,13 @@
                 <div class="contact-form">
                     <div class="headstyle">
                         <h4>Contact Form</h4>
+                        {% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="alert alert-{{ label }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
                     </div>
 {{ form_start(form, {'attr': {'class': 'form-row'}}) }}
 

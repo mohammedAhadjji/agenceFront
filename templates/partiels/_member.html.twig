@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                             <div class="team-text">
-                                <a href="https://demo.phpscriptpoint.com/travelfresh/team-member/8">{{ member.name }} {{ member.lastName }}</a>
+                                <a href="{{ path('app_member_view', { 'id': member['@id'] }) }}">{{ member.name }} {{ member.lastName }}</a>
                                 <p>{{ member.specialite }}</p>
                             </div>
                         </div>

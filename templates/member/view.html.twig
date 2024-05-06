@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MemberController!{% endblock %}
+
+{% block body %}
+<div class="banner-slider" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/team-member-banner-1.jpg)">
+	<div class="bg"></div>
+	<div class="bannder-table">
+		<div class="banner-text">
+			<h1>{{ member.name }} {{ member.lastName }}</h1>
+		</div>
+	</div>
+</div>
+<div class="team-detail pt_50 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			<div class="col-md-4 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+				<div class="team-detail-photo mt_30">
+					<img src="http://localhost:8001/attchments/members/{{ member.image }}" alt="Team Photo">
+					<h4>{{ member.name }} {{ member.lastName }}</h4>
+					<span>{{ member.specialite }}</span>
+					<ul>
+													<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+																			<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+																			<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+																			<li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+																													</ul>
+				</div>
+			</div>
+			<div class="col-md-8 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+				<div class="team-detail-text mt_30">
+					<div class="headstyle">
+						<h4>Details</h4>
+					</div>
+					<p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p><p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.<br></p><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.<br></p>					<div class="team-contact mt_30">
+						<ul>
+															<li><i class="fa fa-envelope"></i>member@yourwebsite.com</li>	
+																						<li><i class="fa fa-phone"></i>111-222-3333</li>	
+																						<li><i class="fa fa-globe"></i>http://www.yourwebsite.com</li>	
+													</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="team-area bg-area pt_80 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="main-headline">
+					<div class="headline">
+						<h2>Our Team</h2>
+					</div>
+					<p>Meet with all our qualified team members</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 mt_30">
+				<div class="team-carousel owl-carousel owl-loaded owl-drag">
+					{% include 'partiels/_member.html.twig'  with {
+    teamMembers : teamMembers
+} %}   </div></div><div class="owl-nav disabled"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
