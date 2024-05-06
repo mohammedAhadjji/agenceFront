@@ -16,7 +16,10 @@ class CustomTwigExtension extends AbstractExtension
 
     public function isDateExpired($date): bool
     {
+        $expirationDate = new \DateTime($date);
         $now = new \DateTime();
-        return $date > $now;
+
+        // Comparer les dates
+        return $expirationDate < $now;
     }
 }

@@ -17,11 +17,11 @@
         <a href="{{ path('app_offre_view', { 'id': offre['id'] }) }}">
             {{ offre['Titre'] }}<br>
              {% if offre['prix'] is defined %}
-            <span style="font-size: 22px;">{{ offre['prix'] }} / personne</span>
+           <span style="font-size: 22px;">{{ offre['prix'] }} MAD / personne</span>
             {% endif %}
             <br>
-         {% if offre.date_fin is defined %}
-    {% if is_date_expired(offre.date_fin) %}
+         {% if offre.dateEperation is defined %}
+    {% if is_date_expired(offre.dateEperation) %}
         <span style="color:#e05d5d;">(Date de réservation expirée)</span>
     {% else %}
         <span style="color:#77d477;">(Available for Booking)</span>

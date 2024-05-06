@@ -49,6 +49,7 @@ class MainController extends AbstractController
         // Votre code existant pour récupérer les informations de l'utilisateur
     
         if ($this->getUser()) {
+            $user= new User();
             // Supposons que vous récupériez l'utilisateur connecté
             $user = $this->getUser();
             $fullName = $user->getFullName();
@@ -79,6 +80,7 @@ class MainController extends AbstractController
         } else {
             return $this->redirectToRoute('app_main');
         }
+        return $this->render('main/tick.html.twig');
         // Reste du code non exécuté après le retour de la réponse
     }
     

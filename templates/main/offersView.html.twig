@@ -23,7 +23,7 @@ width:100%!important;
             <h1>
                 {{ offre['Titre'] }}<br>
                 {% if offre['prix'] is defined %}
-                (${{offre['prix']}} / person){% endif %}
+                ({{offre['prix']}} MAD / person){% endif %}
             </h1>
         </div>
     </div>
@@ -86,7 +86,7 @@ width:100%!important;
                                             <label>Total Price (per person)</label>
                                             <div class="mb_5" style="font-size:32px;">
                                                 {% if offre['prix'] is defined %}
-                ${{offre['prix']}} {% endif %}                                           </div>
+                {{offre['prix']}} MAD{% endif %}                                           </div>
                                             <div class="sep mb_10"></div>
                                             <label>Number of Persons</label>
                                             <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;"onchange="f(event)">
@@ -99,7 +99,7 @@ width:100%!important;
                                              <div class="mb_15" style="font-size:32px;">
                     <span id="amountdiv">
                         {% if offre['prix'] is defined %}
-                            ${{ offre['prix'] }}
+                            {{ offre['prix'] }} MAD
                         {% endif %}
                     </span>
                 </div>
@@ -131,7 +131,7 @@ width:100%!important;
             var amount = 0;
         {% endif %}
         var doubledAmount = amount * numberOfPersons;
-        amountdiv.innerText =  "$" + doubledAmount;
+        amountdiv.innerText = doubledAmount +" MAD";
         document.getElementById('amountInput').value = doubledAmount;
     }
 </script>
