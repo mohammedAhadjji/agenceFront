@@ -15,6 +15,9 @@ services:
     App\Service\TicketGenerator:
         autowire: true
         autoconfigure: true
+    App\Service\CallApiService:
+        autowire: true
+        autoconfigure: true
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:

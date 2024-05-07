@@ -1,0 +1,2 @@
+parameters:
+    app.some_global_parameter: 'valeur_par_defaut'

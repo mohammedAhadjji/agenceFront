@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Form\RegistrationFormType;
 use App\Security\EmailVerifier;
 use App\Security\SecuretyAuthenticator;
+use App\Service\CallApiService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,10 +25,12 @@ class RegistrationController extends AbstractController
 {
     private EmailVerifier $emailVerifier;
     private $client;
+    private $CallApiService;
 
 
-    public function __construct(EmailVerifier $emailVerifier,HttpClientInterface $client)
+    public function __construct(EmailVerifier $emailVerifier,HttpClientInterface $client,CallApiService $CallApiService)
     {
+        $this->CallApiService = $CallApiService;
         $this->client = $client;	
         $this->emailVerifier = $emailVerifier;
     }
@@ -49,7 +52,7 @@ class RegistrationController extends AbstractController
             );
             $entityManager->persist($user);
             $entityManager->flush();
-            $response = $this->client->request('POST', 'http://localhost:8001/api/clients', [
+            $response= $this->CallApiService->postData('/api/clients',[
                 'json' => [
                     'clientId' =>(string) $user->getId(),
                     'fullName' => $user->getFullName(),
@@ -60,9 +63,20 @@ class RegistrationController extends AbstractController
                     'pays' => $user->getPays(),
                 ],
             ]);
+          /*  $response = 
+            $this->client->request('POST', 'http://localhost:8001/api/clients', [
+                'json' => [
+                    'clientId' =>(string) $user->getId(),
+                    'fullName' => $user->getFullName(),
+                    'email' => $user->getEmail(),
+                    'phoneNumber' => $user->getPhoneNember(),
+                    'address' => $user->getAddress(),
+                    'ville' => $user->getVille(),
+                    'pays' => $user->getPays(),
+                ],
+            ])*/
          
-            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
-                (new TemplatedEmail())
+            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,(new TemplatedEmail())
                     ->from(new Address('mohammed.ahadjji@ump.ac.ma', 'mohammed.ahadjji'))
                     ->to($user->getEmail())
                     ->subject('Please Confirm your Email')
