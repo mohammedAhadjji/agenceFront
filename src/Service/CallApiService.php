@@ -31,9 +31,9 @@ class CallApiService
     {
         return $this->getApi($department);
     }
-    public function postData(string $department,$str): array
+    public function postData(string $department,$val): array
     {
-        return $this->postApi($department,$str);
+        return $this->postApi($department,$val);
     }
 
     private function getApi(string $var )

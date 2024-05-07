@@ -29,13 +29,16 @@ class TestController extends AbstractController
         // Votre code existant pour récupérer les informations de l'utilisateur
     
         if ($this->getUser()) {
-            $user= new User();
-            // Supposons que vous récupériez l'utilisateur connecté
             $user = $this->getUser();
-            $fullName = $user->getFullName();//fullName
-            $email = $user->getEmail();//email
-            $address = $user->getAddress();//address
-    
+            if ($user instanceof User) {
+                // Supposons que vous récupériez l'utilisateur connecté
+               
+                $fullName = $user->getFullName();//fullName
+                $email = $user->getEmail();//email
+                $address = $user->getAddress();//address
+            } else {
+                $user= new User();
+            }
             // Récupérer le montant à partir de la session ou d'une autre source
             $amount = 100; // Remplacez ceci par la méthode appropriée pour obtenir le montant
     
