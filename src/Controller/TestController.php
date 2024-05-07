@@ -29,12 +29,17 @@ class TestController extends AbstractController
         // Votre code existant pour récupérer les informations de l'utilisateur
     
         if ($this->getUser()) {
-       
-            $fullName = $this->getUser()['fullName'];
-            $email =  $this->getUser()['email'];
-            $address = $this->getUser()['address'];
+            $user= new User();
+            // Supposons que vous récupériez l'utilisateur connecté
+            $user = $this->getUser();
+            $fullName = $user->getFullName();//fullName
+            $email = $user->getEmail();//email
+            $address = $user->getAddress();//address
     
-            $amount = 100;
+            // Récupérer le montant à partir de la session ou d'une autre source
+            $amount = 100; // Remplacez ceci par la méthode appropriée pour obtenir le montant
+    
+            // Générer le ticket en utilisant le service TicketGenerator
             $pdfContent = $this->ticketGenerator->generateTicket($fullName, $email, $address, $amount);
     
             // Retourner le contenu PDF en tant que réponse
@@ -62,6 +67,7 @@ class TestController extends AbstractController
     #[Route('/tick', name: 'app_tick')]
     public function tick(Request $request): Response
     {
+       // dd($this->getUser());
         
         return $this->render('main/tick.html.twig');
     }
