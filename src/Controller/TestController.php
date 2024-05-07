@@ -55,20 +55,20 @@ class TestController extends AbstractController
             $response->setContent($pdfContent);
             $response->sendContent();
             
-            // Ensuite, effectuez une redirection JavaScript vers la route /tick
+           
             
         } else {
             return $this->redirectToRoute('app_main');
         }
         return $this->render('main/tick.html.twig');
-        // Reste du code non exécuté après le retour de la réponse
+       
     }
     
     #[Route('/tick', name: 'app_tick')]
     public function tick(Request $request): Response
     {
-       // dd($this->getUser());
-        
+      
+       
         return $this->render('main/tick.html.twig');
     }
 }
