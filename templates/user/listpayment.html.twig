@@ -1,0 +1,1696 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}<div class="dashboard-area bg-area pt_50 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			<div class="col-md-3 col-sm-12 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+				<div class="option-board mt_30">
+					<ul>
+						
+<li class="active">
+	<a href="{{path('app_user')}}"><span><i class="fa fa-home"></i></span>Dashboard</a>
+</li>
+
+<li class="">
+	<a href="{{path('app_user_list')}}"><span><i class="fa fa-bars"></i></span>Payment History</a>
+</li>
+
+<li class="">
+	<a href="{{path('app_user_edit')}}"><span><i class="fa fa-user"></i></span>Update Profile</a>
+</li>
+
+<li>
+	<a href="{{path('app_logout')}}"><span><i class="fa fa-sign-in"></i></span>Logout</a>
+</li>					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-12 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+				<div class="detail-dashboard table-responsive mt_30">
+
+					<h1>View All Payments</h1>
+
+					<!--div id="example_wrapper" class="dataTables_wrapper no-footer"><div class="dataTables_length" id="example_length"><label>Show <select name="example_length" aria-controls="example" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div-- id="example_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example"></label></div--><table id="example" class="display dataTable no-footer" width="100%" cellspacing="0" role="grid" aria-describedby="example_info" style="width: 100%;">
+						<thead>
+							<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Serial: activate to sort column descending" style="width: 36px;">Serial</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Payment Date: activate to sort column ascending" style="width: 75px;">Payment Date</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Package: activate to sort column ascending" style="width: 98px;">Package</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Destination: activate to sort column ascending" style="width: 113px;">Destination</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Payment Method: activate to sort column ascending" style="width: 86px;">Payment Method</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Payment Status: activate to sort column ascending" style="width: 81px;">Payment Status</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 106px;">Action</th></tr>
+						</thead>
+						<tbody>
+															
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+																
+															
+						<tr role="row" class="odd">
+									<td class="sorting_1">1</td>
+									<td>2018-12-05</td>
+									<td>3 days in Buenos Aires</td>
+									<td>Buenos Aires, Argentina</td>
+									<td>Bank Deposit</td>
+									<td>Completed</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail1" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">3 days in Buenos Aires</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$200</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother1" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1544008364</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2018-12-05</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell"></div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">360</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">1</div>
+															</div>															
+															
+																														
+																														<div class="rTableRow">
+																<div class="rTableHead">Bank Transaction Information</div>
+																<div class="rTableCell">Test Payment</div>
+															</div>
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">Bank Deposit</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Completed</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="even">
+									<td class="sorting_1">2</td>
+									<td>2019-02-01</td>
+									<td>3 days in Bangkok</td>
+									<td>Bangkok, Thailand</td>
+									<td>PayPal</td>
+									<td>Completed</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail2" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">3 days in Bangkok</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2018-12-20</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2018-12-23</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2018-12-15</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$180</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother2" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1548986634</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2019-02-01</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell">4XN99740B8270931E</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">900</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">5</div>
+															</div>															
+															
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">PayPal</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Completed</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="odd">
+									<td class="sorting_1">3</td>
+									<td>2019-02-01</td>
+									<td>3 days in Marrakesh</td>
+									<td>Marrakesh, Morocco</td>
+									<td>Stripe</td>
+									<td>Completed</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail3" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">3 days in Marrakesh</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2018-12-10</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2018-12-13</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2018-12-07</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$250</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother3" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1549039569</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2019-02-01</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell">ch_1Dz59cBoKopKik6AIOsIiOop</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">1750</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">7</div>
+															</div>															
+															
+																														<div class="rTableRow">
+																<div class="rTableHead">Card Number</div>
+																<div class="rTableCell">4242424242424242</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Card CVV</div>
+																<div class="rTableCell">657</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Card Expire Month</div>
+																<div class="rTableCell">11</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Card Expire Year</div>
+																<div class="rTableCell">2020</div>
+															</div>
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">Stripe</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Completed</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="even">
+									<td class="sorting_1">4</td>
+									<td>2019-02-02</td>
+									<td>15 days in Bangkok</td>
+									<td>Bangkok, Thailand</td>
+									<td>PayPal</td>
+									<td>Completed</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail4" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">15 days in Bangkok</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2018-12-20</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2019-01-05</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2018-12-15</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$300</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother4" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1549078658</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2019-02-02</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell">1PN59311GD4189646</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">1500</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">5</div>
+															</div>															
+															
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">PayPal</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Completed</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="odd">
+									<td class="sorting_1">5</td>
+									<td>2019-02-02</td>
+									<td>3 days in Buenos Aires</td>
+									<td>Buenos Aires, Argentina</td>
+									<td>PayPal</td>
+									<td>Completed</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail5" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">3 days in Buenos Aires</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$200</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother5" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1549122198</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2019-02-02</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell">3LF112482D5303206</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">200</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">1</div>
+															</div>															
+															
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">PayPal</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Completed</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="even">
+									<td class="sorting_1">6</td>
+									<td>2023-02-28</td>
+									<td>30 days in Marrakesh</td>
+									<td>Marrakesh, Morocco</td>
+									<td>PayPal</td>
+									<td>Completed</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail6" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">30 days in Marrakesh</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$500</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother6" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1677548429</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2023-02-28</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell">6LB37103SP9639243</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">500</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">1</div>
+															</div>															
+															
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">PayPal</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Completed</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="odd">
+									<td class="sorting_1">7</td>
+									<td>2024-04-02</td>
+									<td>30 days in Bangkok</td>
+									<td>Bangkok, Thailand</td>
+									<td>PayPal</td>
+									<td>Pending</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail7" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">30 days in Bangkok</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$400</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother7" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1712055433</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2024-04-02</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell"></div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">3600</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">9</div>
+															</div>															
+															
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">PayPal</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Pending</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="even">
+									<td class="sorting_1">8</td>
+									<td>2024-04-10</td>
+									<td>15 days in Greenville</td>
+									<td>Greenville, South Carolina</td>
+									<td>Bank Deposit</td>
+									<td>Pending</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail8" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">15 days in Greenville</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$400</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother8" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1712758421</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2024-04-10</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell"></div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">400</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">1</div>
+															</div>															
+															
+																														
+																														<div class="rTableRow">
+																<div class="rTableHead">Bank Transaction Information</div>
+																<div class="rTableCell">Bank Name: ABC Bank
+Account Number: 1222320234444
+Branch Name: NY Branch
+Country: USA</div>
+															</div>
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">Bank Deposit</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Pending</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="odd">
+									<td class="sorting_1">9</td>
+									<td>2024-04-13</td>
+									<td>15 days in Salina Island</td>
+									<td>Salina Island, Italy</td>
+									<td>Bank Deposit</td>
+									<td>Pending</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail9" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">15 days in Salina Island</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$480</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother9" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1712967573</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2024-04-13</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell"></div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">480</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">1</div>
+															</div>															
+															
+																														
+																														<div class="rTableRow">
+																<div class="rTableHead">Bank Transaction Information</div>
+																<div class="rTableCell"></div>
+															</div>
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">Bank Deposit</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Pending</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr><tr role="row" class="even">
+									<td class="sorting_1">10</td>
+									<td>2024-04-13</td>
+									<td>3 days in Salina Island</td>
+									<td>Salina Island, Italy</td>
+									<td>PayPal</td>
+									<td>Pending</td>
+									<td>
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetail10" style="width:100%;margin-bottom:3px;">Package Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetail10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:900px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Package Name</div>
+																<div class="rTableCell">3 days in Salina Island</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Description</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+
+<p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Package Location</div>
+																<div class="rTableCell"></div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Start Date</div>
+																<div class="rTableCell">2030-02-12</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">End Date</div>
+																<div class="rTableCell">2030-02-18</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Last Booking Date</div>
+																<div class="rTableCell">2030-02-06</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Price (per person)</div>
+																<div class="rTableCell">$350</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Itinerary</div>
+																<div class="rTableCell"><p><strong>Day 1:Â&nbsp;</strong></p>
+
+<p>During the day, enjoy the trendy shops and walking around the cobbled streets.</p>
+
+<p>At night, grab a drink or something to eat in one of the many bars and restaurants of the area.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Day 2:</strong></p>
+
+<p>The fair is very popular with tourists and locals alike, so it is always very crowded, especially on sunny days.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Policy</div>
+																<div class="rTableCell"><p>Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens expetenda id sit, at usu eius eligendi singulis. Sea ocurreret principes ne. At nonumy aperiri pri, nam quodsi copiosae intellegebat et, ex deserunt euripidis usu. Per ad ullum lobortis. Duo volutpat imperdiet ut, postea salutatus imperdiet ut per, ad utinam debitis invenire has.</p>
+
+<p>Liber utroque vim an, ne his brute vivendo, est fabulas consetetur appellantur an. In dolore legendos quo, ne ferri noluisse sed. Tantas eligendi at ius. Purto ipsum nemore sit ad.</p>
+</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Terms and Conditions</div>
+																<div class="rTableCell"><p>Vix tale noluisse voluptua ad, ne brute altera democritum cum. Omnes ornatus qui et, te aeterno discere ocurreret sea. Tollit cetero cu usu, etiam evertitur id nec. Id pro unum pertinax oportere, vel ad ridens mollis. Ad ius meis suavitate voluptaria.</p>
+
+<p>Mei ut errem legimus periculis, eos liber epicurei necessitatibus eu, facilisi postulant vel no. Ad mea commune disputando, cu vel choro exerci. Pri et oratio iisque atomorum, enim detracto mei ne, id eos soleat iudicabit. Ne reque reformidans mei, rebum delicata consequuntur an sit. Sea ad audire utamur. Ut mei ridens minimum intellegat, perpetua euripidis te qui, ad consul intellegebat comprehensam eum.</p>
+</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+
+
+
+										<a href="" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalDetailAnother10" style="width:100%;margin-bottom:3px;">Payment Detail</a><br>
+
+										<!-- Modal Start -->
+										<div class="modal fade" id="myModalDetailAnother10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											<div class="modal-dialog" style="width:600px;">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														<h4 class="modal-title" id="myModalLabel">
+															Detail Information
+														</h4>
+													</div>
+													<div class="modal-body">
+														<div class="rTable">
+															<div class="rTableRow">
+																<div class="rTableHead">Invoice No</div>
+																<div class="rTableCell">1713040653</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Date</div>
+																<div class="rTableCell">2024-04-13</div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Transaction Id</div>
+																<div class="rTableCell"></div>
+															</div>
+															<div class="rTableRow">
+																<div class="rTableHead">Paid Amount</div>
+																<div class="rTableCell">4550</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Total Person</div>
+																<div class="rTableCell">13</div>
+															</div>															
+															
+																														
+															
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Method</div>
+																<div class="rTableCell">PayPal</div>
+															</div>
+
+															<div class="rTableRow">
+																<div class="rTableHead">Payment Status</div>
+																<div class="rTableCell">Pending</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Modal End -->
+									</td>
+								</tr></tbody>
+					</table><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 33 entries</div><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_previous">Previous</a><span><a class="paginate_button current" aria-controls="example" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="example" data-dt-idx="2" tabindex="0">2</a><a class="paginate_button " aria-controls="example" data-dt-idx="3" tabindex="0">3</a><a class="paginate_button " aria-controls="example" data-dt-idx="4" tabindex="0">4</a></span><a class="paginate_button next" aria-controls="example" data-dt-idx="5" tabindex="0" id="example_next">Next</a></div></!--div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -13,15 +13,12 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class TestController extends AbstractController
 {
-    
-    private $client;
     private $CallApiService;
     private $ticketGenerator;
     public function __construct(HttpClientInterface $client,CallApiService $CallApiService,TicketGenerator $ticketGenerator)
     {
         $this->ticketGenerator = $ticketGenerator;
         $this->CallApiService = $CallApiService;
-        $this->client = $client;
     }
     #[Route('/app', name: 'app')]
     public function test(Request $request): Response
@@ -31,13 +28,14 @@ class TestController extends AbstractController
         if ($this->getUser()) {
             $user = $this->getUser();
             if ($user instanceof User) {
-                // Supposons que vous récupériez l'utilisateur connecté
                
                 $fullName = $user->getFullName();//fullName
                 $email = $user->getEmail();//email
                 $address = $user->getAddress();//address
             } else {
-                $user= new User();
+                $fullName = "fullName";
+                $email = "email";
+                $address = 'address';
             }
             // Récupérer le montant à partir de la session ou d'une autre source
             $amount = 100; // Remplacez ceci par la méthode appropriée pour obtenir le montant

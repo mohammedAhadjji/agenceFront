@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+<div class="dashboard-area bg-area pt_50 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			<div class="col-md-3 col-sm-12 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+				<div class="option-board mt_30">
+					<ul>
+						
+<li class="active">
+	<a href="{{path('app_user')}}"><span><i class="fa fa-home"></i></span>Dashboard</a>
+</li>
+
+<li class="">
+	<a href="/user/ListPayment"><span><i class="fa fa-bars"></i></span>Payment History</a>
+</li>
+
+<li class="">
+	<a href="{{path('app_user_edit')}}"><span><i class="fa fa-user"></i></span>Update Profile</a>
+</li>
+
+<li>
+	<a href="{{path('app_logout')}}"><span><i class="fa fa-sign-in"></i></span>Logout</a>
+</li>					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-12 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+				<div class="detail-dashboard mt_30">
+					<h1>Hi, {{ app.user.fullName }}</h1>
+					<h3>Welcome to your dashboard.</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-bg"></div>
+    <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline white">
+                    <div class="headline">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit expedita, iure ullam cum vero ex sint aperiam maxime.                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                <div class="newsletter-message">
+                </div>
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                    <div class="newsletter-submit">
+                        <input type="text" placeholder="Enter Your Email" name="email_subscribe">
+                        <input type="submit" value="Submit" name="form_subscribe">
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

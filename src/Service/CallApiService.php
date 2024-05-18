@@ -11,13 +11,13 @@ class CallApiService
 {
     
     private $params;
-    private $port;
+    private $url;
     private $client;
     private $key;
 
     public function __construct(HttpClientInterface $client,ParameterBagInterface $params)
     {
-        $this->port =  'http://localhost:8001';
+        $this->url =  'http://localhost:8001';
         $this->params = $params;
         $this->key = $params->get('app.some_global_parameter');
         $this->client = $client;
@@ -41,7 +41,7 @@ class CallApiService
 
         $response = $this->client->request(
             'GET',
-            $this->port . $var
+            $this->url . $var
         );
 
         return $response->toArray();
@@ -49,7 +49,7 @@ class CallApiService
     private function postApi( $str ,$var )
     {
 
-       $response = $this->client->request('POST', $this->port.$str, $var);
+       $response = $this->client->request('POST', $this->url.$str, $var);
 
         return $response->toArray();
     }

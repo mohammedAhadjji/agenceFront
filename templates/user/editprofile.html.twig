@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}<div class="dashboard-area bg-area pt_50 pb_80">
+	<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+		<div class="row">
+			<div class="col-md-3 col-sm-12 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+				<div class="option-board mt_30">
+			<ul>
+						
+<li class="active">
+	<a href="{{path('app_user')}}"><span><i class="fa fa-home"></i></span>Dashboard</a>
+</li>
+
+<li class="">
+	<a href="/user/ListPayment"><span><i class="fa fa-bars"></i></span>Payment History</a>
+</li>
+
+<li class="">
+	<a href="{{path('app_user_edit')}}"><span><i class="fa fa-user"></i></span>Update Profile</a>
+</li>
+
+<li>
+	<a href="{{path('app_logout')}}"><span><i class="fa fa-sign-in"></i></span>Logout</a>
+</li>					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-12 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+				<div class="detail-dashboard mt_30">
+					<h1>Update Profile</h1>
+
+					
+					<div class="login-area bg-area" style="padding-top: 0;">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="login-form">
+									<form action="https://demo.phpscriptpoint.com/travelfresh/traveller/profile_update" class="" method="post" accept-charset="utf-8">
+										<div class="form-row">
+											<div class="form-group">
+												<label for="">Name *</label>
+												<input type="text" class="form-control" name="traveller_name" value="John Doe">
+											</div>
+
+											<div class="form-group">
+												<label for="">Email Address (Can not be changed)</label>
+												<input type="email" class="form-control" name="" value="traveller@gmail.com" disabled="">
+											</div>
+
+											<div class="form-group">
+												<label for="">Phone *</label>
+												<input type="text" class="form-control" name="traveller_phone" value="321-653-7631">
+											</div>
+
+											<div class="form-group">
+												<label for="">Address *</label>
+												<textarea name="traveller_address" class="form-control" cols="30" rows="10" style="height:120px;">3391 Stoneybrook Road</textarea>
+											</div>
+
+											<div class="form-group">
+												<label for="">City *</label>
+												<input type="text" class="form-control" name="traveller_city" value="Cocoa">
+											</div>
+
+											<div class="form-group">
+												<label for="">State *</label>
+												<input type="text" class="form-control" name="traveller_state" value="FL">
+											</div>
+
+											<div class="form-group">
+												<label for="">Country *</label>
+												<input type="text" class="form-control" name="traveller_country" value="USA">
+											</div>
+
+											<div class="form-group">
+												<label for="">Password</label>
+												<input type="password" class="form-control" name="traveller_password">
+											</div>
+
+											<div class="form-group">
+												<label for="">Retype Password</label>
+												<input type="password" class="form-control" name="traveller_re_password">
+											</div>
+
+											<button type="submit" class="btn btn-primary" name="form1">Update Information</button>
+
+										</div>
+									</form>								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-bg"></div>
+    <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline white">
+                    <div class="headline">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit expedita, iure ullam cum vero ex sint aperiam maxime.                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+                <div class="newsletter-message">
+                </div>
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                    <div class="newsletter-submit">
+                        <input type="text" placeholder="Enter Your Email" name="email_subscribe">
+                        <input type="submit" value="Submit" name="form_subscribe">
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
