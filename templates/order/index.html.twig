@@ -78,38 +78,22 @@
                                     <div class="form-group">
                                         <select name="payment_method" class="custom-select" id="advFieldsStatus">
                                             <option value="">Select Payment Method</option>
-                                            <option value="PayPal">PayPal</option>
                                             <option value="Stripe">Stripe</option>
                                             <option value="Bank Deposit">Bank Deposit</option>
                                         </select>
                                     </div>
                                     
-                                    <form action="https://demo.phpscriptpoint.com/travelfresh/payment/paypal" id="paypal_form" class="paypal" style="display:none;" method="post" accept-charset="utf-8">
-
-                                        <input type="hidden" name="cmd" value="_xclick">
-                                        <input type="hidden" name="no_note" value="1">
-                                        <input type="hidden" name="lc" value="UK">
-                                        <input type="hidden" name="currency_code" value="USD">
-                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest">
-
-                                        <input type="hidden" name="p_id" value="9">
-                                        <input type="hidden" name="item_amount" value="400">
-                                        <input type="hidden" name="total_person" value="1">
-
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-success pull-left" name="form1">Pay Now</button>
-                                        </div>
-                                    </form>
+                                   
                                     
 
 
-                                    <form action="https://demo.phpscriptpoint.com/travelfresh/payment/stripe" id="stripe_form" class="" style="display:none;" method="post" accept-charset="utf-8">
+                                    <form action="{{ path('app_tick', { 'id': order.id }) }}" id="stripe_form" class="" style="display:none;" method="post" accept-charset="utf-8">
 
                                         <input type="hidden" name="payment" value="posted">
-
-                                        <input type="hidden" name="p_id" value="9">
-                                        <input type="hidden" name="item_amount" value="400">
-                                        <input type="hidden" name="total_person" value="1">
+ 
+                                        <input type="hidden" name="p_id" value="{{ order.id }}">
+                                        <input type="hidden" name="item_amount" value="{{ order.amount }}">
+                                        <input type="hidden" name="total_person" value="{{ order.numberSeat }}">
                                         
                                         <div style="clear:both;margin-bottom:10px;"></div>
                                         <div class="form-group">
@@ -154,10 +138,10 @@
                                         <div style="clear:both;margin-bottom:10px;"></div>
                                         <div class="form-group">
                                             <label>Bank Details</label><br>
-                                            Bank Name: ABC Bank<br>
+                                            Bank Name: CIH<br>
 Account Number: 1222320234444<br>
-Branch Name: NY Branch<br>
-Country: USA                                        </div>
+Branch Name: oujda branch<br>
+Country: MAROCCO                                        </div>
                                             
                                         <div style="clear:both;margin-bottom:10px;"></div>
                                         <div class="form-group">
@@ -170,7 +154,7 @@ Country: USA                                        </div>
                                             <button type="submit" class="btn btn-success pull-left" name="form3">Pay Now</button>
                                         </div>
                                     </form>
-
+<br><br>
                                 </div>
                             </div>                            
 
@@ -186,6 +170,7 @@ Country: USA                                        </div>
             </div>
         </div>
     </div>
+<br>
 
 <div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
 <div class="newsletter-bg"></div>
@@ -214,4 +199,66 @@ Country: USA                                        </div>
         </div>
     </div>
 </div>
+<script>
+document.getElementById('stripe_form').addEventListener('submit', function(event) {
+    // Prevent form submission
+    event.preventDefault();
+
+    // Get form values
+    var cardNumber = document.querySelector('input[name="card_number"]').value;
+    var cardCvv = document.querySelector('input[name="card_cvv"]').value;
+    var cardMonth = document.querySelector('input[name="card_month"]').value;
+    var cardYear = document.querySelector('input[name="card_year"]').value;
+
+    // Clear previous error messages
+    var msgContainer = document.getElementById('msg-container');
+    msgContainer.innerHTML = '';
+
+    // Validate form values
+    var errors = [];
+    if (cardNumber.trim() === '') {
+        errors.push('Card Number is required.');
+    } else if (!/^\d{14}$/.test(cardNumber)) {
+        errors.push('Card Number must be a 14-digit number.');
+    }
+
+    if (cardCvv.trim() === '') {
+        errors.push('Card CVV is required.');
+    } else if (!/^\d{3}$/.test(cardCvv)) {
+        errors.push('Card CVV must be a 3-digit number.');
+    }
+
+    if (cardMonth.trim() === '') {
+        errors.push('Expiry Month is required.');
+    } else if (!/^\d{1,2}$/.test(cardMonth) || parseInt(cardMonth) < 1 || parseInt(cardMonth) > 12) {
+        errors.push('Expiry Month must be a valid month (1-12).');
+    }
+
+    if (cardYear.trim() === '') {
+        errors.push('Expiry Year is required.');
+    } else if (!/^\d{4}$/.test(cardYear) || parseInt(cardYear) < new Date().getFullYear()) {
+        errors.push('Expiry Year must be a valid year and not in the past.');
+    }
+
+    // Check if the card is not expired
+    var currentYear = new Date().getFullYear();
+    var currentMonth = new Date().getMonth() + 1;
+    if (parseInt(cardYear) === currentYear && parseInt(cardMonth) < currentMonth) {
+        errors.push('The card expiration date cannot be in the past.');
+    }
+
+    // If there are errors, display them and stop form submission
+    if (errors.length > 0) {
+        errors.forEach(function(error) {
+            var errorMsg = document.createElement('div');
+            errorMsg.style.color = 'red';
+            errorMsg.textContent = error;
+            msgContainer.appendChild(errorMsg);
+        });
+    } else {
+        // If no errors, submit the form
+        event.target.submit();
+    }
+});
+</script>
 {% endblock %}

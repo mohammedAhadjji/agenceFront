@@ -41,4 +41,18 @@ class OrderService
         $response = $this->httpClient->request('GET', $this->url."/api/orders/{$id}");
         return $response->toArray();
     }
+    public function changeOrderStatus($id, $newStatus): array
+    {
+        $response = $this->httpClient->request('PATCH', $this->url."/api/orders/{$id}", [
+            'headers' => ['Content-Type' => 'application/merge-patch+json'],
+            'json' => ['status' => $newStatus],
+        ]);
+
+        if ($response->getStatusCode() === Response::HTTP_OK) {
+            $order = $response->toArray();
+            return ['success' => true, 'order' => $order];
+        } else {
+            return ['success' => false];
+        }
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Service\CallApiService;
+use App\Service\OrderService;
 use App\Service\TicketGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,16 +16,21 @@ class TestController extends AbstractController
 {
     private $CallApiService;
     private $ticketGenerator;
-    public function __construct(HttpClientInterface $client,CallApiService $CallApiService,TicketGenerator $ticketGenerator)
+    private $orderService;
+    
+    public function __construct(HttpClientInterface $client,CallApiService $CallApiService,TicketGenerator $ticketGenerator,OrderService $orderService)
     {
         $this->ticketGenerator = $ticketGenerator;
         $this->CallApiService = $CallApiService;
+        $this->orderService = $orderService;
     }
-    #[Route('/app', name: 'app')]
+    #[Route('/app/{id}', name: 'app')]
     public function test(Request $request): Response
     {
-        // Votre code existant pour récupérer les informations de l'utilisateur
-    
+        $id = $request->attributes->get('id');
+        $order = $this->orderService->getOrder($id);
+        // Votre code existant pour récupérer les informations de l'utilisateur changeOrderStatus
+        $this->orderService->changeOrderStatus($id,'payée');
         if ($this->getUser()) {
             $user = $this->getUser();
             if ($user instanceof User) {
@@ -38,8 +44,9 @@ class TestController extends AbstractController
                 $address = 'address';
             }
             // Récupérer le montant à partir de la session ou d'une autre source
-            $amount = 100; // Remplacez ceci par la méthode appropriée pour obtenir le montant
+            $amount = $order['amount']; // Remplacez ceci par la méthode appropriée pour obtenir le montant
     
+
             // Générer le ticket en utilisant le service TicketGenerator
             $pdfContent = $this->ticketGenerator->generateTicket($fullName, $email, $address, $amount);
     
@@ -56,7 +63,6 @@ class TestController extends AbstractController
             $response->setContent($pdfContent);
             $response->sendContent();
             
-           
             
         } else {
             return $this->redirectToRoute('app_main');
@@ -65,11 +71,17 @@ class TestController extends AbstractController
        
     }
     
-    #[Route('/tick', name: 'app_tick')]
-    public function tick(Request $request): Response
+    #[Route('/tick/{id}', name: 'app_tick')]
+    public function tick(Request $request, $id): Response
     {
-      
-       
-        return $this->render('main/tick.html.twig');
+         $id = $request->attributes->get('id'); // This is redundant because $id is already passed as a parameter
+
+        // Change the order status to 'payée'
+        $result = $this->orderService->changeOrderStatus($id, 'payée');
+
+      // dd($result);
+        return $this->render('main/tick.html.twig', [
+            'id' => $id,
+        ]);
     }
 }
