@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello OrderController!{% endblock %}
+
+{% block body %}
+<div class="banner-slider" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/banner_payment.jpg)">
+    <div class="bg"></div>
+    <div class="bannder-table">
+        <div class="banner-text">
+            <h1>Payment</h1>
+        </div>
+    </div>
+</div>
+<div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <div class="row">
+            <div class="col-md-12 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                <div class="mt_30">
+
+                    <div class="fea-descrip mt_30">
+                        <div class="headstyle-two">
+                            <h4>Your Cart</h4>
+                        </div>
+                        {% if order %}
+                        <div class="descrip-pre">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width:25%;">Order </th>
+                                        <th style="width:25%;">Amount (MAD)</th>
+                                        <th style="width:25%;">Number of Seats</th>
+                                        <th style="width:25%;">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                        <tr>
+                                            <td>{{ order['id'] }}</td>
+                                            <td>{{ order.amount }} MAD</td>
+                                            <td>{{ order.numberSeat }}</td>
+                                            <td>{{ order.status }}</td>
+                                        </tr>
+
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                            
+                       
+                        <div class="descrip-pre">
+                            <table class="table table-bordered">
+                                <tbody><tr>
+                                    <th style="width:25%;">Name</th>
+                                    <th style="width:25%;">Per Person Price (in USD)</th>
+                                    <th style="width:25%;">Number of Person</th>
+                                    <th style="width:25%;text-align: right;">SubTotal</th>
+                                </tr>
+                                <tr>
+                                    <td>Number of Persons</td>
+                                    <td>$400</td>
+                                    <td>1</td>
+                                    <td style="text-align:right;">
+                                                                                $400                                    </td>
+                                </tr>                                
+                                <tr>
+                                    <th colspan="3" style="text-align: right;">Total:</th>
+                                    <th style="text-align:right;">
+                                        $400                                    </th>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    {% endif %}
+                            
+                        <div class="headstyle-two">
+                            <h4>Make Payment</h4>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <select name="payment_method" class="custom-select" id="advFieldsStatus">
+                                            <option value="">Select Payment Method</option>
+                                            <option value="PayPal">PayPal</option>
+                                            <option value="Stripe">Stripe</option>
+                                            <option value="Bank Deposit">Bank Deposit</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <form action="https://demo.phpscriptpoint.com/travelfresh/payment/paypal" id="paypal_form" class="paypal" style="display:none;" method="post" accept-charset="utf-8">
+
+                                        <input type="hidden" name="cmd" value="_xclick">
+                                        <input type="hidden" name="no_note" value="1">
+                                        <input type="hidden" name="lc" value="UK">
+                                        <input type="hidden" name="currency_code" value="USD">
+                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest">
+
+                                        <input type="hidden" name="p_id" value="9">
+                                        <input type="hidden" name="item_amount" value="400">
+                                        <input type="hidden" name="total_person" value="1">
+
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success pull-left" name="form1">Pay Now</button>
+                                        </div>
+                                    </form>
+                                    
+
+
+                                    <form action="https://demo.phpscriptpoint.com/travelfresh/payment/stripe" id="stripe_form" class="" style="display:none;" method="post" accept-charset="utf-8">
+
+                                        <input type="hidden" name="payment" value="posted">
+
+                                        <input type="hidden" name="p_id" value="9">
+                                        <input type="hidden" name="item_amount" value="400">
+                                        <input type="hidden" name="total_person" value="1">
+                                        
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <label>Card Number *</label>
+                                            <input type="text" name="card_number" class="form-control card-number">
+                                        </div>
+
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <label>Card CVV *</label>
+                                            <input type="text" name="card_cvv" class="form-control card-cvc">
+                                        </div>
+
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <label>Expiry Month *</label>
+                                            <input type="text" name="card_month" class="form-control card-expiry-month">
+                                        </div>
+
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <label>Expiry Year *</label>
+                                            <input type="text" name="card_year" class="form-control card-expiry-year">
+                                        </div>
+
+                                        
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success pull-left" name="form2">Pay Now</button>
+                                            <div id="msg-container" style="width:100%;margin-top:20px;overflow:hidden;"></div>
+                                        </div>
+                                    </form>
+
+
+                                    <form action="https://demo.phpscriptpoint.com/travelfresh/payment/bank" id="bank_form" class="" style="display:none;" method="post" accept-charset="utf-8">
+
+                                        <input type="hidden" name="p_id" value="9">
+                                        <input type="hidden" name="item_amount" value="400">
+                                        <input type="hidden" name="total_person" value="1">
+
+
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <label>Bank Details</label><br>
+                                            Bank Name: ABC Bank<br>
+Account Number: 1222320234444<br>
+Branch Name: NY Branch<br>
+Country: USA                                        </div>
+                                            
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <label>Transaction Information <span>*</span></label>
+                                            <textarea name="transaction_info" class="form-control" cols="30" rows="10" style="height:150px;"></textarea>
+                                        </div>
+                                        
+                                        <div style="clear:both;margin-bottom:10px;"></div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success pull-left" name="form3">Pay Now</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>                            
+
+
+                        </div>
+
+
+
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="newsletter-area pt_120 pb_120" style="background-image: url(https://demo.phpscriptpoint.com/travelfresh/public/uploads/newsletter.jpg)" id="newsletter">
+<div class="newsletter-bg"></div>
+    <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+    <div class="row">
+            <div class="col-md-12">
+                <div class="main-headline white">
+                    <div class="headline">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugit expedita, iure ullam cum vero ex sint aperiam maxime.                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt_30 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                <div class="newsletter-message">
+                </div>
+                <form action="https://demo.phpscriptpoint.com/travelfresh/newsletter/send" class="" method="post" accept-charset="utf-8">
+                    <div class="newsletter-submit">
+                        <input type="text" placeholder="Enter Your Email" name="email_subscribe">
+                        <input type="submit" value="Submit" name="form_subscribe">
+                    </div>
+                </form>            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

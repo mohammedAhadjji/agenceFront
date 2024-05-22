@@ -76,47 +76,53 @@ width:100%!important;
                     </div>
                     <div class="row book-now">
                         <div class="col-md-12">
-                            <form action="#" class="" method="post" accept-charset="utf-8">
-                                <input type="hidden" name="totalamount" value="{{offre['prix']}}" id="amountInput" readonly>
-                                <input type="hidden" name="amount" value="{{offre['prix']}}" readonly>
-                                <input type="hidden" name="Titre" value="{{ offre['Titre'] }}">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12">
-                                        <div class="form-group">
-                                            <label>Total Price (per person)</label>
-                                            <div class="mb_5" style="font-size:32px;">
-                                                {% if offre['prix'] is defined %}
-                {{offre['prix']}} MAD{% endif %}                                           </div>
-                                            <div class="sep mb_10"></div>
-                                            <label>Number of Persons</label>
-                                            <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;"onchange="f(event)">
-                                            {% for i in 1..20 %}
-                                                <option value="{{i}}">{{i}}</option>
-                                            {% endfor %}  
-                                            </select>
-                                            <div class="sep mb_15"></div>
-                                            <label>Total Price</label>
-                                             <div class="mb_15" style="font-size:32px;">
+                           <form action="{{ path('app_order_create') }}" method="post" accept-charset="utf-8">
+    <input type="hidden" name="offer_id" value="{{ offre['id'] }}">
+    <input type="hidden" name="totalamount" value="{{ offre['prix'] }}" id="amountInput" readonly>
+    <input type="hidden" name="amount" value="{{ offre['prix'] }}" readonly>
+    <input type="hidden" name="Titre" value="{{ offre['Titre'] }}">
+    
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="form-group">
+                <label>Total Price (per person)</label>
+                <div class="mb_5" style="font-size:32px;">
+                    {% if offre['prix'] is defined %}
+                        {{ offre['prix'] }} MAD
+                    {% endif %}
+                </div>
+                <div class="sep mb_10"></div>
+                
+                <label>Number of Persons</label>
+                <select id="numberPerson" name="number_of_person" class="custom-select select2 mb_15" style="width: auto;" onchange="updateTotal()">
+                    {% for i in 1..20 %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                </select>
+                
+                <div class="sep mb_15"></div>
+                
+                <label>Total Price</label>
+                <div class="mb_15" style="font-size:32px;">
                     <span id="amountdiv">
                         {% if offre['prix'] is defined %}
                             {{ offre['prix'] }} MAD
                         {% endif %}
                     </span>
                 </div>
-                                        </div>
-                                    </div>                                
-                                </div>
-                                
-                                                                <div class="form-group">
-                                                                 {% if is_date_expired(offre.dateEperation) %}
-        <button class="btn btn-info btn-lg" type="submit" name="form_book" disabled>Book Your Seat</button>
-    {% else %}
-         <button class="btn btn-info btn-lg" type="submit" name="form_book">Book Your Seat</button>
-    {% endif %}
-                                   
-                                </div>
-                                
-                            </form>                        </div>
+            </div>
+        </div>                                
+    </div>
+    
+    <div class="form-group">
+        {% if is_date_expired(offre.dateEperation) %}
+            <button class="btn btn-info btn-lg" type="submit" name="form_book" disabled>Book Your Seat</button>
+        {% else %}
+            <button class="btn btn-info btn-lg" type="submit" name="form_book">Book Your Seat</button>
+        {% endif %}
+    </div>
+</form>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -125,21 +131,16 @@ width:100%!important;
     </div>
 </div>
 <script>
-    function f(event) {
-        event.preventDefault(); 
-        var numberOfPersons = document.getElementById('numberPerson').value;
-        var amountdiv = document.getElementById('amountdiv');
-        var amountSpan = document.getElementById('amountSpan');
-        {% if offre['prix'] is defined %}
-            var amount = {{ offre['prix'] }}; 
-        {% else %}
-            var amount = 0;
-        {% endif %}
-        var doubledAmount = amount * numberOfPersons;
-        amountdiv.innerText = doubledAmount +" MAD";
-        document.getElementById('amountInput').value = doubledAmount;
-    }
+function updateTotal() {
+    var pricePerPerson = {{ offre['prix'] }};
+    var numberOfPersons = document.getElementById('numberPerson').value;
+    var total = pricePerPerson * numberOfPersons;
+
+    document.getElementById('amountdiv').innerText = total + ' MAD';
+    document.getElementById('amountInput').value = total;
+}
 </script>
+
 
 
 <div class="featured-detail country-detail pt_0 pb_80" style="background:#fff;">

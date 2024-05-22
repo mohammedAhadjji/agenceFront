@@ -30,20 +30,7 @@ class MainController extends AbstractController
     }
     
     
-    #[Route('/destination/views{id<.+>}', name: 'app_offres')]
-    public function offers(Request $request): Response
-    {
-        $id = $request->attributes->get('id');
-       // $response = $this->client->request('GET', 'http://localhost:8001' . $id);
-       // $content = $response->toArray();
-        $destination = $this->CallApiService->getData($id );
-       //dd($destination);
-       //dd($offers);
-        return $this->render('main/offers.html.twig', [
-            'offers' => $destination['offers'],
-            'destination' => $destination,
-        ]);
-    }
+   
     #[Route('/', name: 'app_main')]
     public function index(): Response
     {
@@ -62,21 +49,4 @@ class MainController extends AbstractController
         ]);
     }
 
-
-   
-    #[Route('/offer/views/{id}', name: 'app_offre_view')]
-    public function offer(Request $request): Response
-    {
-        $id = $request->attributes->get('id');
-       // $response = $this->client->request('GET', 'http://localhost:8001/api/offres/' . $id);
-       
-       // $content = $response->toArray();
-        $offer = $this->CallApiService->getData('/api/offres/' . $id );
-       // dd($destination);
-       // dd($destination);
-       //dd($offer);
-        return $this->render('main/offersView.html.twig', [
-            'offre' => $offer,
-        ]);
-    }
 }
