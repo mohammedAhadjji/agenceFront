@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Service\OrderService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class OrderController extends AbstractController
 {
@@ -30,8 +32,20 @@ class OrderController extends AbstractController
         $numberOfPersons = $request->request->get('number_of_person');
         $totalAmount = $request->request->get('totalamount');
 
-        $response = $this->orderService->createOrder($offerId, $numberOfPersons, $totalAmount);
-
+      
+        if ($this->getUser() instanceof User) {
+            $user = $this->getUser();
+            if ($user instanceof User) {
+                $orderData['id'] = $user->getId();
+                $orderData['fullname'] = $user->getFullName();
+                $orderData['clientId'] = $user->getId();
+                $orderData['adress'] = $user->getAddress();
+                $orderData['email'] = $user->getEmail();
+                
+                 //dd($orderData['adress']);
+                 $response = $this->orderService->createOrder($offerId, $numberOfPersons, $totalAmount,$orderData);
+               // $result = $this->orderService->updateOrder($orderData);
+            }}
         if ($response['success']) {
             return $this->redirectToRoute('app_order_confirmation', ['id' => $response['order']['id']]);
         } else {
@@ -44,6 +58,9 @@ class OrderController extends AbstractController
     public function orderConfirmation($id): Response
     {
         $order = $this->orderService->getOrder($id);
+       
+        
+      
      // dd($order);
         return $this->render('order/index.html.twig', [
             'order' => $order,

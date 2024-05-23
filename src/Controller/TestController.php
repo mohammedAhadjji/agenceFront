@@ -31,24 +31,29 @@ class TestController extends AbstractController
         $order = $this->orderService->getOrder($id);
         // Votre code existant pour récupérer les informations de l'utilisateur changeOrderStatus
         $this->orderService->changeOrderStatus($id,'payée');
-        if ($this->getUser()) {
+        $order = $this->orderService->getOrder($id);
+        $orderData  = [];
+
+        if ($this->getUser() instanceof User) {
             $user = $this->getUser();
             if ($user instanceof User) {
-               
-                $fullName = $user->getFullName();//fullName
-                $email = $user->getEmail();//email
-                $address = $user->getAddress();//address
-            } else {
-                $fullName = "fullName";
-                $email = "email";
-                $address = 'address';
-            }
+                $orderData['id'] = $id;
+                $orderData['fullname'] = $user->getFullName();
+                $orderData['clientId'] = $user->getId();
+                $orderData['adress'] = $user->getAddress();
+                $orderData['email'] = $user->getEmail();
+                
+                 //dd($orderData);
+                $result = $this->orderService->updateOrder($orderData);
+            
+
+       
             // Récupérer le montant à partir de la session ou d'une autre source
             $amount = $order['amount']; // Remplacez ceci par la méthode appropriée pour obtenir le montant
     
 
             // Générer le ticket en utilisant le service TicketGenerator
-            $pdfContent = $this->ticketGenerator->generateTicket($fullName, $email, $address, $amount);
+            $pdfContent = $this->ticketGenerator->generateTicket($orderData['fullname'],$orderData['email'] , $orderData['adress'], $amount);
     
             // Retourner le contenu PDF en tant que réponse
             $response = new Response($pdfContent, 200, [
@@ -62,7 +67,7 @@ class TestController extends AbstractController
             $response->sendHeaders();
             $response->setContent($pdfContent);
             $response->sendContent();
-            
+        }
             
         } else {
             return $this->redirectToRoute('app_main');
@@ -75,7 +80,7 @@ class TestController extends AbstractController
     public function tick(Request $request, $id): Response
     {
          $id = $request->attributes->get('id'); // This is redundant because $id is already passed as a parameter
-
+        
         // Change the order status to 'payée'
         $result = $this->orderService->changeOrderStatus($id, 'payée');
 
