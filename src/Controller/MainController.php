@@ -34,10 +34,7 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_main')]
     public function index(): Response
     {
-        //$response = $this->CallApiService->getData('/api/team_members' );
-       // $response = $this->client->request('GET', 'http://localhost:8001/api/team_members');
-       // $response2 = $this->client->request('GET', 'http://localhost:8001/api/destinations');
-      //  $response3 = $this->client->request('GET', 'http://localhost:8001/api/services');
+      
         $teamMembers = $this->CallApiService->getData('/api/team_members' );
         $destination = $this->CallApiService->getData('/api/destinations' );
         $services = $this->CallApiService->getData('/api/services' );
@@ -46,6 +43,21 @@ class MainController extends AbstractController
             'teamMembers' => $teamMembers['hydra:member'],
             "destination" => $destination['hydra:member'],
             "services" => $services['hydra:member']
+        ]);
+    }
+    #[Route('/ABoutUS', name: 'app_Aboutus')]
+    public function about(): Response
+    {
+      
+        
+        return $this->render('main/about_us.html.twig', [
+        ]);
+    }
+    #[Route('/FAQ', name: 'app_FAQ')]
+    public function faq(): Response
+    {
+      
+        return $this->render('main/faq.html.twig', [
         ]);
     }
 

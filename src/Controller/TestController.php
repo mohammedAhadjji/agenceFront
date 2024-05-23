@@ -79,8 +79,10 @@ class TestController extends AbstractController
     #[Route('/tick/{id}', name: 'app_tick')]
     public function tick(Request $request, $id): Response
     {
-         $id = $request->attributes->get('id'); // This is redundant because $id is already passed as a parameter
-        
+         $id = $request->attributes->get('id'); 
+
+
+         
         // Change the order status to 'payée'
         $result = $this->orderService->changeOrderStatus($id, 'payée');
 
